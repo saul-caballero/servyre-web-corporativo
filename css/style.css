@@ -311,6 +311,12 @@ nav {
     color: var(--white);
 }
 
+.contact-text{
+    color: var(--dark-color);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
 .contact-info {
     display: flex;
     justify-content: center;

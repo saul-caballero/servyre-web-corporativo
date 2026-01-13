@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVYRE - Infraestructura Vial</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +60,37 @@
             </div>
         </div>
     </section>
+
+    <!-- Mision, Vision, Valores Section -->
+    <div class="container">
+        <section class="mvv__component">
+            <div class="mvv__buttons">
+                <button class="mvv__button mvv__button--active" id="mision">Mision</button>
+                <button class="mvv__button" id="vision">Vision</button>
+                <button class="mvv__button" id="valores">Valores</button>
+            </div>
+            <div id="mvv__info">
+                <div class="mvv__text mvv__text--active" data-id="mision">
+                    <p>La misión de Grupo Servyre es la de satisfacer las necesidades de nuestros clientes, brindando en todo momento un valor agregado único que nos diferencie de nuestros competidores en el mercado y que nos permitan optimizar nuestro desempeño, para crear ambientes sanos, seguros y agradables.</p>
+                </div>
+                <div class="mvv__text" data-id="vision">
+                    <p>La Visión de Grupo Servyre es la de hacer crecer las capacidades de creación y servicio, contribuyendo al desarrollo personal de todos los que integran nuestra organización teniendo como características:
+                        Institucional y dirigida profesionalmente.
+                        Con una organización eficiente e integrada por personas comprometidas.
+                        Con una estructura sana para responder con oportunidad a los retos del negocio.
+                        Reconocida por su experiencia, competencia y responsabilidad social.</p>
+                    </div>
+                    <div class="mvv__text" data-id="valores">
+                        <p>Grupo Servyre está cimentada en valores fundamentales y creemos en:
+                            El trabajo como crecimiento personal y medio de satisfacción de necesidades.
+                            La honestidad, como principio de unidad y de lealtad.
+                            El respeto, como condición en el trato con los demás.
+                        El compromiso, como servicio a los demás y signo de colaboración.
+                        Los resultados, como expresión de profesionalismo y responsabilidad.</p>
+                </div>
+            </div>
+        </section>
+    </div>  
 
     <!-- Services Section -->
     <section id="servicios" class="services">
@@ -147,6 +178,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/component-mvv.js"></script>
 </body>
 </html>

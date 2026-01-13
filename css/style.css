@@ -57,7 +57,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--primary-color);
+    color: var(--dark-color);
     margin-bottom: 20px;
     font-weight: 700;
 }

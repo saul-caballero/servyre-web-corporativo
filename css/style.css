@@ -374,11 +374,12 @@ nav {
 /* Contact */
 .contact {
     position: relative;
+    min-height: 100vh;
     background-color: var(--dark-color);
     padding: var(--section-padding);
+    padding-bottom: 120px;
     color: var(--white);
     text-align: center;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -443,6 +444,23 @@ nav {
     background-repeat: no-repeat;
     z-index: 10;
 }
+
+/* Responsive Mobile Wave */
+@media (max-width: 768px) {
+    .contact {
+        padding-bottom: 220px;
+    }
+
+    .wave {
+        height: 220px;
+    }
+
+    .btn--inicio {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
 
 /* Footer */
 footer {

@@ -379,6 +379,11 @@ nav {
     color: var(--white);
     text-align: center;
     height: 100vh;
+    overflow: hidden;
+}
+
+.contact .container{
+    z-index: 20;
 }
 
 .contact h2 {
@@ -390,6 +395,7 @@ nav {
     align-items: start;
     flex-wrap: wrap;
     gap: 3rem;
+    height: auto;
 }
 
 .contact-texts {
@@ -411,12 +417,31 @@ nav {
 }
 
 .btn--inicio {
+    background-color: var(--dark-color);
     position: absolute;
     bottom: 30px;
     right: 30px;
     padding: 10px 24px;
     text-transform: none;
     box-shadow: var(--shadow);
+    z-index: 30;
+}
+
+.btn--inicio:hover{
+    color: var(--primary-color);
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 250px;
+    background: url(/assets/wave-primary.svg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
 }
 
 /* Footer */

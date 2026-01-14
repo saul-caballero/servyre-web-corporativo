@@ -373,46 +373,52 @@ nav {
 
 /* Contact */
 .contact {
-    background-color: var(--primary-color);
+    background-color: var(--dark-color);
     padding: var(--section-padding);
     color: var(--white);
     text-align: center;
+    height: 100vh;
 }
 
 .contact h2 {
     color: var(--white);
 }
 
-.contact-text{
-    color: var(--dark-color);
-    font-family: var(--font-body);
-    font-weight: 600;
-}
-
-.contact-info {
+.contact-flex{
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
+    align-items: start;
     flex-wrap: wrap;
+    gap: 3rem;
 }
 
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-texts {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    padding: 1.5rem 2rem ;
 }
 
-.contact-item i {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--accent-color);
+.contact-texts h3{
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.contact-texts p {
+    font-family: var(--font-body);
+    text-shadow: var(--shadow);
+}
+
+.btn--inicio {
+    float: right;
+    padding: 5px 20px;
+    text-transform: none;
 }
 
 /* Footer */
 footer {
-    background-color: var(--dark-color);
-    color: #888;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
     padding: 40px 0;
     text-align: center;
 }

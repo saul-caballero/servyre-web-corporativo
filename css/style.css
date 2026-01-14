@@ -373,6 +373,7 @@ nav {
 
 /* Contact */
 .contact {
+    position: relative;
     background-color: var(--dark-color);
     padding: var(--section-padding);
     color: var(--white);
@@ -410,9 +411,12 @@ nav {
 }
 
 .btn--inicio {
-    float: right;
-    padding: 5px 20px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 24px;
     text-transform: none;
+    box-shadow: var(--shadow);
 }
 
 /* Footer */

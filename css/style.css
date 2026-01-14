@@ -1,10 +1,6 @@
 :root {
     --primary-color: #e7b40b;
-    /* Deep Blue - Corporate/Trust */
-    --secondary-color: #e1be0e;
-    /* Brighter Blue - Action/Highlight */
     --accent-color: #ffcc00;
-    /* Safety Yellow - Road/Construction Theme */
     --dark-color: #1a1a1a;
     --light-color: #f4f4f4;
     --white: #ffffff;
@@ -16,8 +12,6 @@
     --transition: all 0.3s ease;
     --shadow: 1px 1px 5px rgba(0, 0, 0, 0.400);
     --gradient: linear-gradient(162deg,rgba(26, 26, 26, 1) 65%, rgba(176, 176, 176, 1) 100%);
-
-
 }
 
 /* Reset & Base */
@@ -431,6 +425,14 @@ nav {
     line-height: 1.5;
     font-family: var(--font-body);
     text-shadow: var(--shadow);
+}
+
+.contact-texts a {
+    text-decoration: underline;
+}
+
+.contact-texts a:hover{
+    color: var(--primary-color);
 }
 
 .btn--inicio {

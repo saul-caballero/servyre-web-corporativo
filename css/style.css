@@ -15,6 +15,8 @@
     --section-padding: 80px 0;
     --transition: all 0.3s ease;
     --shadow: 1px 1px 5px rgba(0, 0, 0, 0.400);
+    --gradient: linear-gradient(162deg,rgba(26, 26, 26, 1) 65%, rgba(176, 176, 176, 1) 100%);
+
 
 }
 
@@ -199,13 +201,16 @@ nav {
 }
 
 .about-image{
-    background-image: url('../img/grupo-servyre.jpg');
-    background-size: cover;
-    background-position: center;
     height: 300px;
     display: flex;
     align-items: center;
     border-radius: 8px;
+}
+
+.about-image img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 }
 /* Mision Vision, Valores */
 .mvv__component{
@@ -263,8 +268,12 @@ nav {
 
 /* Services */
 .services {
+    background: var(--gradient);
     padding: var(--section-padding);
-    background-color: var(--dark-color);
+}
+
+.services h2{
+    color: var(--white);
 }
 
 .services-grid {
@@ -364,8 +373,8 @@ nav {
 
 /* Contact */
 .contact {
-    padding: var(--section-padding);
     background-color: var(--primary-color);
+    padding: var(--section-padding);
     color: var(--white);
     text-align: center;
 }

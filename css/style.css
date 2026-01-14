@@ -412,7 +412,23 @@ nav {
     border-bottom: 2px solid var(--primary-color);
 }
 
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
 .contact-texts p {
+    margin: 0;
+    line-height: 1.5;
     font-family: var(--font-body);
     text-shadow: var(--shadow);
 }

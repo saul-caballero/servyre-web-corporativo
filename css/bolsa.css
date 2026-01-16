@@ -123,6 +123,13 @@
 .form__btns button{
     flex: 1;
     padding: 15px ;
+    color: var(--white);
+    font-family: var(--font-heading);
+}
+
+.form__reset{
+    background-color: var(--text-color);
+    border: none;
 }
 
 

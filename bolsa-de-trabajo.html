@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVYRE - Empleo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bolsa.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700;900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon-servyre.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon-servyre.png">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="index.html#servicios">Servicios</a>
+                    <a href="index.html#productos">Productos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <section id="inicio" class="hero-bolsa">
+        <div class="container-bolsa container">
+            <div class="bolsa__texts">
+                <h1>Bolsa de Trabajo</h1>
+                <p>En Servyre estamos en constante búsqueda de talento. Déjanos tus datos y forma parte de nuestro
+                    equipo.</p>
+            </div>
+            <div class="bolsa__form">
+                <form id="formulario" class="form">
+                    <div class="form__campo">
+                        <label for="nombre">Nombre: <span class="required">*</span></label>
+                        <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo"
+                            class="form__input" />
+                    </div>
+                    <div class="form__campo">
+                        <label for="telefono">Teléfono: <span class="required">*</span></label>
+                        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono de Contacto"
+                            class="form__input" />
+                    </div>
+                    <div class="form__campo">
+                        <label for="email">Email: <span class="required">*</span></label>
+                        <input id="email" type="email" name="email" placeholder="Email, ej: info@correo.com"
+                            class="form__input" />
+                    </div>
+                    <div class="form__campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" type="text" name="mensaje"
+                            placeholder="Descripción de Mensaje (opcional)." class="form__input"></textarea>
+                    </div>
+                    <div class="form__campo">
+                        <label>Adjuntar Currículum (PDF, DOC, DOCX) <span class="required">*</span></label>
+                        <div class="form__campo--file">
+                            <input type="file" id="curriculum" name="curriculum" accept=".pdf,.doc,.docx">
+                            <label for="curriculum" class="file-label campo__file--text">📎 Seleccionar archivo</label>
+                        </div>
+                        <div class="file-name" id="fileName"></div>
+                    </div>
+                    <div id="botones" class="form__btns">
+                        <button type="submit" class="form__submit" disabled>Enviar</button>
+                        <button type="reset" class="form__reset">Reiniciar</button>
+                    </div>
+                    <div id="spinner" class="">
+                        <div class="sk-chase mt-10">
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contact-flex">
+                <div class="contact-texts">
+                    <h3>Ubicación</h3>
+                    <div class="contact-item">
+                        <img src="assets/icons/location.svg" alt="Ubicacion" class="icon">
+                        <p>P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120 Ciudad
+                            de México,
+                            CDMX</p>
+                    </div>
+                </div>
+                <div class="contact-texts">
+                    <h3>Contacto</h3>
+                    <div class="contact-item">
+                        <img src="assets/icons/phone.svg" alt="Telefono" class="icon">
+                        <p>800 822 3484</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/icons/email.svg" alt="Correo" class="icon">
+                        <a
+                            href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre...">Correo
+                            electrónico</a>
+                    </div>
+                </div>
+                <div class="contact-texts">
+                    <h3>Bolsa de Trabajo</h3>
+                    <div class="contact-item">
+                        <img src="assets/icons/job.svg" alt="Correo" class="icon">
+                        <a href="https://mx.indeed.com/cmp/Grupo-Servyre-S.a-De-C.v" target="_blank">Indeed</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#inicio" class="btn btn--inicio">Ir a Inicio</a>
+        </div>
+        <div class="wave"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SERVYRE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -112,7 +112,7 @@ nav {
 }
 
 .logo {
-    background-image: url(../img/logo-servyre.png);
+    background-image: url(../img/logo-servyre.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
@@ -161,7 +161,7 @@ nav {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVYRE - Empleo</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bolsa.css">
+    <link rel="stylesheet" href="css/empleo.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="img/favicon-servyre.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="img/favicon-servyre.png">
-
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf_S04sAAAAACkuE8PuokEaac4umzslAxDRtOpp"></script>
 </head>
 
 <body>
+    <div id="notificaciones-container"></div>
 
     <!-- Header -->
     <header>
@@ -43,12 +44,19 @@
     <section id="inicio" class="hero-bolsa">
         <div class="container-bolsa container">
             <div class="bolsa__texts">
-                <h1>Bolsa de Trabajo</h1>
-                <p>En Servyre estamos en constante búsqueda de talento. Déjanos tus datos y forma parte de nuestro
-                    equipo.</p>
+                <h1>Bolsa de Trabajo / Empleo</h1>
+                <p>En Servyre estamos en constante búsqueda de talento comprometido y con ganas de crecer.
+                    Si te interesa formar parte de nuestro equipo, completa el siguiente formulario y adjunta tu
+                    currículum vitae.
+                    Nuestro equipo revisará tu información y se pondrá en contacto contigo en caso de que tu perfil sea
+                    considerado.</p>
+                <p class="bolsa-texts--warning">La información proporcionada será utilizada únicamente con fines de
+                    reclutamiento y selección de personal.</p>
+                <p>¿Tienes alguna duda antes de postularte?</p>
+                <a href="#contacto" class="btn-secundario">Contáctanos</a>
             </div>
             <div class="bolsa__form">
-                <form id="formulario" class="form">
+                <form id="formulario" class="form" enctype="multipart/form-data">
                     <div class="form__campo">
                         <label for="nombre">Nombre: <span class="required">*</span></label>
                         <input id="nombre" type="text" name="nombre" placeholder="Nombre Completo"
@@ -56,8 +64,8 @@
                     </div>
                     <div class="form__campo">
                         <label for="telefono">Teléfono: <span class="required">*</span></label>
-                        <input id="telefono" type="tel" name="telefono" placeholder="Teléfono de Contacto"
-                            class="form__input" />
+                        <input id="telefono" type="tel" name="telefono" placeholder="Ejemplo: 5514739833"
+                            class="form__input" pattern="[0-9]{10,15}" inputmode="numeric" maxlength="15" title="Solo números (10-15 dígitos)"/>
                     </div>
                     <div class="form__campo">
                         <label for="email">Email: <span class="required">*</span></label>
@@ -70,7 +78,8 @@
                             placeholder="Descripción de Mensaje (opcional)." class="form__input"></textarea>
                     </div>
                     <div class="form__campo">
-                        <label>Adjuntar Currículum (PDF, DOC, DOCX) <span class="required">*</span></label>
+                        <label>Adjuntar Currículum (PDF, DOC, DOCX) - Tamaño máximo permitido: 5MB<span
+                                class="required">*</span></label>
                         <div class="form__campo--file">
                             <input type="file" id="curriculum" name="curriculum" accept=".pdf,.doc,.docx">
                             <label for="curriculum" class="file-label campo__file--text">📎 Seleccionar archivo</label>
@@ -78,10 +87,10 @@
                         <div class="file-name" id="fileName"></div>
                     </div>
                     <div id="botones" class="form__btns">
-                        <button type="submit" class="form__submit" disabled>Enviar</button>
+                        <button type="submit" class="form__submit">Enviar</button>
                         <button type="reset" class="form__reset">Reiniciar</button>
                     </div>
-                    <div id="spinner" class="">
+                    <div id="spinner" class="hidden">
                         <div class="sk-chase mt-10">
                             <div class="sk-chase-dot"></div>
                             <div class="sk-chase-dot"></div>
@@ -108,35 +117,48 @@
                     <div class="contact-item">
                         <img src="assets/icons/location.svg" alt="Ubicacion" class="icon">
                         <p>P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120 Ciudad
-                            de México,
-                            CDMX</p>
+                            de México, CDMX</p>
                     </div>
                 </div>
                 <div class="contact-texts">
                     <h3>Contacto</h3>
                     <div class="contact-item">
                         <img src="assets/icons/phone.svg" alt="Telefono" class="icon">
-                        <p>800 822 3484</p>
+                        <a href="tel:8008223484">800 822 3484</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/icons/whatsapp.svg" alt="Telefono" class="icon">
+                        <a href="https://wa.me/528008223484" target="_blank">Escríbenos por Whatsapp</a>
                     </div>
                     <div class="contact-item">
                         <img src="assets/icons/email.svg" alt="Correo" class="icon">
                         <a
-                            href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre...">Correo
-                            electrónico</a>
+                            href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre...">Escríbenos
+                            por Correo electrónico</a>
                     </div>
                 </div>
                 <div class="contact-texts">
                     <h3>Bolsa de Trabajo</h3>
                     <div class="contact-item">
                         <img src="assets/icons/job.svg" alt="Correo" class="icon">
-                        <a href="https://mx.indeed.com/cmp/Grupo-Servyre-S.a-De-C.v" target="_blank">Indeed</a>
+                        <a href="https://mx.indeed.com/cmp/Grupo-Servyre-S.a-De-C.v" target="_blank">Vacantes en Servyre
+                            – Indeed</a>
                     </div>
                 </div>
             </div>
-            <a href="#inicio" class="btn btn--inicio">Ir a Inicio</a>
+
+            
         </div>
+        <a href="#inicio" class="btn--inicio" aria-label="Volver al inicio de la página">
+            <img src="assets/icons/angle-up.svg" class="icon" alt="">
+            Volver a inicio
+        </a>
         <div class="wave"></div>
     </section>
+
+
+
+
 
     <!-- Footer -->
     <footer>
@@ -146,6 +168,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/procesar-formulario.js"></script>
 </body>
 
 </html>

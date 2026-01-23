@@ -27,25 +27,27 @@
 }
 
 
+
 /* Timeline Section */
 
 .timeline-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 100%);
+    background: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
 }
 
 .timeline-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: var(--white);
 }
 
 .timeline-subtitle {
     text-align: center;
-    color: var(--text-light);
+    color: #ccc;
     font-size: 1.1rem;
     margin-bottom: 60px;
+
 }
 
 /* Timeline Container */
@@ -117,7 +119,8 @@
 /* Timeline Content */
 
 .timeline-content {
-    background: #fff;
+    background: #2a2a2a;
+    color: #e0e0e0;
     padding: 18px; 
     border-radius: 10px; 
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
@@ -142,19 +145,21 @@
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
     border-left: 12px solid #fff;
-}
-
-.timeline-item--left .timeline-content::after {
-    content: '';
-    position: absolute;
-    left: -12px; /* Ajustado */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent; 
-    border-bottom: 12px solid transparent;
-    border-right: 12px solid #fff;
+    border-left-color: #ffffff;
+    }
+    
+    .timeline-item--left .timeline-content::after {
+        content: '';
+        position: absolute;
+        left: -12px; /* Ajustado */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent; 
+        border-bottom: 12px solid transparent;
+        border-right: 12px solid #fff;
+        border-right-color: #ffffff;
 }
 
 .timeline-year {
@@ -172,14 +177,14 @@
 
 .timeline-content h3 {
     font-size: 1.15rem; 
-    color: var(--dark-color);
+    color: var(--white);
     margin-bottom: 10px;
     font-family: var(--font-heading);
     line-height: 1.3;
 }
 
 .timeline-content p {
-    color: var(--text-light);
+    color: #ccc;
     line-height: 1.6;
     font-size: 0.95rem; 
     margin: 0;
@@ -451,39 +456,5 @@
     .timeline-dot {
         transition: none;
         animation: none;
-    }
-}
-
-/* Dark Mode  */
-
-@media (prefers-color-scheme: dark) {
-    .timeline-section {
-        background: linear-gradient(to bottom, #1a1a1a 0%, #2a2a2a 100%);
-    }
-
-    .timeline-section h2 {
-        color: var(--white);
-    }
-
-    .timeline-subtitle {
-        color: #ccc;
-    }
-
-    .timeline-content {
-        background: #2a2a2a;
-        color: #e0e0e0;
-    }
-
-    .timeline-content h3 {
-        color: var(--white);
-    }
-
-    .timeline-content p {
-        color: #ccc;
-    }
-
-    .timeline-content::after {
-        border-left-color: #2a2a2a;
-        border-right-color: #2a2a2a;
     }
 }

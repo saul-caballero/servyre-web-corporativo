@@ -1,80 +1,370 @@
-/* About Empresa Section */
-.about-empresa{
+/* About Section */
+.empresa-section {
     padding: 100px 0;
+    background-color: #fff;
+}
+
+.empresa-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    font-family: var(--font-heading);
+}
+
+.empresa-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.empresa-text {
     line-height: 1.8;
 }
 
-
-.about-empresa h1{
-    border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 50px;
-}
-
-.empresa-flex{
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 20px;
-
-}
-
-.empresa-flex p {
-    flex: 2;
+.empresa-text p {
+    font-size: 1.05rem;
+    color: #555;
     margin: 0;
 }
 
-.empresa-flex .image {
-    max-width: 900px;
-    min-width: 200px;
-    flex: 3;
-    overflow: hidden;
-}
-.image img{
+.empresa-image {
     width: 100%;
-    max-height: 300px;
+    margin: 0;
+    overflow: hidden;
     border-radius: 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.empresa-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
 
+.empresa-image:hover img {
+    transform: scale(1.05);
+}
 
-/* Hero Empresa Section */
-.hero-empresa {
-    height: 60vh;
-    min-height: 200px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero-empresa.webp);
+.empresa-footer {
+    line-height: 1.8;
+}
+
+.empresa-footer p {
+    font-size: 1.05rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+    .empresa-section {
+        padding: 80px 0;
+    }
+
+    .empresa-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .empresa-content {
+        gap: 30px;
+        margin-bottom: 35px;
+    }
+
+    .empresa-text p,
+    .empresa-footer p {
+        font-size: 1rem;
+    }
+
+    .empresa-image img {
+        max-height: 300px;
+    }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .empresa-section {
+        padding: 60px 0;
+    }
+
+    .empresa-header h1 {
+        font-size: 1.8rem;
+        border-bottom-width: 2px;
+        padding-bottom: 12px;
+        margin-bottom: 30px;
+    }
+
+    .empresa-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .empresa-text p,
+    .empresa-footer p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .empresa-image {
+        border-radius: 6px;
+    }
+
+    .empresa-image img {
+        max-height: 250px;
+    }
+}
+
+/* Responsive - Móviles Pequeños */
+@media (max-width: 480px) {
+    .empresa-section {
+        padding: 50px 0;
+    }
+
+    .empresa-header h1 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+
+    .empresa-content {
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .empresa-text p,
+    .empresa-footer p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .empresa-image {
+        border-radius: 4px;
+    }
+
+    .empresa-image img {
+        max-height: 220px;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .empresa-image img {
+        transition: none;
+    }
+}
+
+/* Experinece Banner Section */
+.experience-section {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/hero-empresa.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
+    overflow: hidden;
 }
 
-.hero-empresa .hero-content {
+.experience-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.experience-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.experience-content {
     max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    padding: 0 20px;
+    padding: 60px 20px;
 }
 
-.hero-empresa .hero-content-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin: 20px 0;
+.experience-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--white);
+    font-family: var(--font-heading);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin: 0 0 30px 0;
+    animation: fadeInUp 0.8s ease-out;
 }
 
-
-.hero-empresa .hero-content-subtitle{
-    font-size: 1rem;
+.experience-subtitle {
+    font-size: 1.15rem;
     font-family: var(--font-body);
     font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.7;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
     margin: 0;
+    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive - Tablets grandes y escritorio pequeño */
+@media (max-width: 1200px) {
+    .experience-section {
+        min-height: 55vh;
+    }
+
+    .experience-title {
+        font-size: 2rem;
+    }
+
+    .experience-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+    .experience-section {
+        min-height: 50vh;
+        background-attachment: scroll; /* Mejor performance en tablets */
+    }
+
+    .experience-content {
+        padding: 50px 20px;
+    }
+
+    .experience-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        line-height: 1.3;
+    }
+
+    .experience-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .experience-section {
+        min-height: 45vh;
+        background-attachment: scroll;
+        background-position: center center;
+    }
+
+    .experience-overlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+    }
+
+    .experience-content {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+
+    .experience-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 1.3;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .experience-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Responsive - Móviles Pequeños */
+@media (max-width: 480px) {
+    .experience-section {
+        min-height: 40vh;
+    }
+
+    .experience-content {
+        padding: 35px 15px;
+    }
+
+    .experience-title {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+        line-height: 1.25;
+    }
+
+    .experience-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .experience-section {
+        min-height: 35vh;
+    }
+
+    .experience-title {
+        font-size: 1.2rem;
+    }
+
+    .experience-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* Accesibilidad - Sin animaciones */
+@media (prefers-reduced-motion: reduce) {
+    .experience-title,
+    .experience-subtitle {
+        animation: none;
+    }
+}
+
+/* Modo paisaje en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .experience-section {
+        min-height: 70vh;
+    }
+
+    .experience-content {
+        padding: 30px 20px;
+    }
+}
 
 /* Timeline Section */
 

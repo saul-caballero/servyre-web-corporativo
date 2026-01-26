@@ -737,14 +737,14 @@ nav {
 
 /* Footer Section */
 
-footer {
+.footer {
     background-color: var(--primary-color);
     color: var(--dark-color);
     padding: 20px 0;
     text-align: center;
 }
 
-footer p {
+.footer p {
     font-size: 0.9rem;
     font-weight: 600;
 }

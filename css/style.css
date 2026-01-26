@@ -75,7 +75,7 @@ p {
     display: inline-block;
     padding: 12px 30px;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--dark-color);
     border-radius: 5px;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -86,7 +86,6 @@ p {
 }
 
 .btn:hover {
-    color: var(--dark-color);
     box-shadow: var(--shadow);
     transform: translateY(-2px);
 }
@@ -157,20 +156,52 @@ nav {
 }
 
 /* Hero Section */
-
 .hero {
+    position: relative;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../img/hero-bg.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
     margin-bottom: 0;
+    overflow: hidden;
+}
+
+/* Picture y la imagen como background */
+.hero-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+/* Overlay oscuro encima de la imagen */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+/* Contenido sobre todo */
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -190,7 +221,6 @@ nav {
     margin-right: auto;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
 
 /* About Section */
 
@@ -219,6 +249,19 @@ nav {
 
 
 /* Carousel Styles */
+
+/* Asegurar que picture funcione en el carousel */
+.carousel-slide picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carousel-slide picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .carousel-container {
     position: relative;
     width: 100%;
@@ -409,18 +452,25 @@ nav {
 
 
 /* Misión, Visión, Valores */
-
 .mvv__component {
-    max-width: 1200px;
     width: 100%;
-    margin: 60px auto;
-    padding: 0 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
+
+.mvv__component .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
 
 .mvv__buttons {
     display: flex;
@@ -457,7 +507,7 @@ nav {
 
 .mvv__button--active {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--dark-color);
     border-color: var(--primary-color);
     box-shadow: var(--shadow);
     font-weight: bold;
@@ -524,7 +574,7 @@ nav {
 .service-card h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 .service-card p {
@@ -738,14 +788,14 @@ nav {
 
 /* Footer Section */
 
-footer {
+.footer {
     background-color: var(--primary-color);
     color: var(--dark-color);
     padding: 20px 0;
     text-align: center;
 }
 
-footer p {
+.footer p {
     font-size: 0.9rem;
     font-weight: 600;
 }

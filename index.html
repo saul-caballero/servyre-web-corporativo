@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SERVYRE - Líderes en infraestructura vial en México. Especialistas en señalización, semaforización, mantenimiento vial y sistemas inteligentes de transporte. Más de 50 años de experiencia.">
     <title>SERVYRE - Infraestructura Vial</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Fonts -->
@@ -24,7 +26,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"></a>
+                <a href="index.html" class="logo" aria-label="Inicio - Servyre"></a>
                 <div class="nav-links" id="navLinks">
                     <a href="#inicio">Inicio</a>
                     <a href="empresa.html">Empresa</a>
@@ -42,6 +44,11 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <picture class="hero-picture">
+            <source media="(max-width: 640px)" srcset="img/hero-bg-mobile.webp">
+            <source media="(max-width: 1024px)" srcset="img/hero-bg-tablet.webp">
+            <img src="img/hero-bg.webp" alt="background-carretera" class="hero-bg-image">
+        </picture>
         <div class="container hero-content">
             <h1>Tu Primera Opción en Infraestructura Vial</h1>
             <p>Líderes en soluciones integrales de señalización, semaforización y mantenimiento vial. Garantizando
@@ -50,254 +57,281 @@
         </div>
     </section>
 
-   <!-- About Section -->
-<section class="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2>Sobre SERVYRE</h2>
-                <p>Líderes en inteligencia de tránsito y señalamiento vial a nivel nacional.
-                    Especialistas en el área de proyectos de infraestructura vial, así como en el campo de
-                    mantenimiento y conservación de los mismos innovando día con día.
-                    Una de las empresas más importantes proveedora en el mercado de la ingeniería de tránsito a los
-                    gobiernos federales, estatales y municipales en México.
-                    En Grupo Servyre ofrecemos; Diseño, fabricación, suministro, colocación, mantenimiento y
-                    software de nuestros servicios, sistemas y productos.</p>
-                <p>Oficina central se encuentra en México, CDMX, y las oficinas de representación en la República
-                    Mexicana</p>
-                <a href="#contacto" class="btn">Contáctanos</a>
-            </div>
-            
-            <!-- Carrusel -->
-            <div class="carousel-container">
-                <div class="carousel-wrapper">
-                    <div class="carousel-slide active">
-                        <img src="img/carousel-1.jpg" alt="Trabajadores de Grupo Servyre" loading="lazy">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/carousel-2.jpg" alt="Infraestructura Vial" loading="lazy">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/carousel-3.jpg" alt="Proyectos SERVYRE" loading="lazy">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/carousel-4.jpg" alt="Señalización Vial" loading="lazy">
-                    </div>
-                </div>
-                
-                <!-- Controles -->
-                <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <!-- Indicadores -->
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-slide="0" aria-label="Ir a imagen 1"></button>
-                    <button class="indicator" data-slide="1" aria-label="Ir a imagen 2"></button>
-                    <button class="indicator" data-slide="2" aria-label="Ir a imagen 3"></button>
-                    <button class="indicator" data-slide="3" aria-label="Ir a imagen 4"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- About Section -->
 
 
+    <!-- About Section -->
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Sobre SERVYRE</h2>
+                        <p>Líderes en inteligencia de tránsito y señalamiento vial a nivel nacional.
+                            Especialistas en el área de proyectos de infraestructura vial, así como en el campo de
+                            mantenimiento y conservación de los mismos innovando día con día.
+                            Una de las empresas más importantes proveedora en el mercado de la ingeniería de tránsito a
+                            los gobiernos federales, estatales y municipales en México.
+                            En Grupo Servyre ofrecemos; Diseño, fabricación, suministro, colocación, mantenimiento y
+                            software de nuestros servicios, sistemas y productos.</p>
+                        <p>Oficina central se encuentra en México, CDMX, y las oficinas de representación en la
+                            República Mexicana</p>
+                        <a href="#contacto" class="btn">Contáctanos</a>
+                    </div>
 
+                    <!-- Carrusel -->
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="img/carousel-1-mobile.webp">
+                                    <source media="(max-width: 1024px)" srcset="img/carousel-1-tablet.webp">
+                                    <img src="img/carousel-1-desktop.webp" alt="Trabajadores de Grupo Servyre"
+                                        loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="carousel-slide">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="img/carousel-2-mobile.webp">
+                                    <source media="(max-width: 1024px)" srcset="img/carousel-2-tablet.webp">
+                                    <img src="img/carousel-2-desktop.webp" alt="Infraestructura Vial" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="carousel-slide">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="img/carousel-3-mobile.webp">
+                                    <source media="(max-width: 1024px)" srcset="img/carousel-3-tablet.webp">
+                                    <img src="img/carousel-3-desktop.webp" alt="Proyectos SERVYRE" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="carousel-slide">
+                                <picture>
+                                    <source media="(max-width: 640px)" srcset="img/carousel-4-mobile.webp">
+                                    <source media="(max-width: 1024px)" srcset="img/carousel-4-tablet.webp">
+                                    <img src="img/carousel-4-desktop.webp" alt="Señalización Vial" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
 
-    <!-- Mision, Vision, Valores Section -->
-    <div class="container">
-        <section class="mvv__component">
-            <div class="mvv__buttons">
-                <button class="mvv__button mvv__button--active" id="mision">Misión</button>
-                <button class="mvv__button" id="vision">Visión</button>
-                <button class="mvv__button" id="valores">Valores</button>
-            </div>
-            <div id="mvv__info">
-                <div class="mvv__text mvv__text--active" data-id="mision">
-                    <p>La Misión de Grupo Servyre es la de satisfacer las necesidades de nuestros clientes, brindando en
-                        todo momento un valor agregado único que nos diferencie de nuestros competidores en el mercado y
-                        que nos permitan optimizar nuestro desempeño, para crear ambientes sanos, seguros y agradables.
-                    </p>
-                </div>
-                <div class="mvv__text" data-id="vision">
-                    <p>La Visión de Grupo Servyre es la de hacer crecer las capacidades de creación y servicio,
-                        contribuyendo al desarrollo personal de todos los que integran nuestra organización teniendo
-                        como características:
-                        Institucional y dirigida profesionalmente.
-                        Con una organización eficiente e integrada por personas comprometidas.
-                        Con una estructura sana para responder con oportunidad a los retos del negocio.
-                        Reconocida por su experiencia, competencia y responsabilidad social.</p>
-                </div>
-                <div class="mvv__text" data-id="valores">
-                    <p>Grupo Servyre está cimentada en valores fundamentales y creemos en:
-                        El trabajo como crecimiento personal y medio de satisfacción de necesidades.
-                        La honestidad, como principio de unidad y de lealtad.
-                        El respeto, como condición en el trato con los demás.
-                        El compromiso, como servicio a los demás y signo de colaboración.
-                        Los resultados, como expresión de profesionalismo y responsabilidad.</p>
+                        <!-- Controles -->
+                        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-slide="0" aria-label="Ir a imagen 1"></button>
+                            <button class="indicator" data-slide="1" aria-label="Ir a imagen 2"></button>
+                            <button class="indicator" data-slide="2" aria-label="Ir a imagen 3"></button>
+                            <button class="indicator" data-slide="3" aria-label="Ir a imagen 4"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Services Section -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-traffic-light"></i>
+        <!-- Mision, Vision, Valores Section -->
+        <section class="mvv__component">
+            <div class="container">
+                <div class="mvv__buttons">
+                    <button class="mvv__button mvv__button--active" id="mision">Misión</button>
+                    <button class="mvv__button" id="vision">Visión</button>
+                    <button class="mvv__button" id="valores">Valores</button>
+                </div>
+                <div id="mvv__info">
+                    <div class="mvv__text mvv__text--active" data-id="mision">
+                        <p>La Misión de Grupo Servyre es la de satisfacer las necesidades de nuestros clientes,
+                            brindando en todo momento un valor agregado único que nos diferencie de nuestros
+                            competidores
+                            en el mercado y que nos permitan optimizar nuestro desempeño, para crear ambientes sanos,
+                            seguros y agradables.
+                        </p>
                     </div>
-                    <h3>Infraestructura y Mantenimiento Vial</h3>
-                    <p>Repavimentación, Bacheo, Alcantarillado, Estructuras Metálicas, Mantenimiento Urbano, Obra Civil,
-                        Guarniciones y Banquetas, Mantenimiento y Conservación.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-road"></i>
+                    <div class="mvv__text" data-id="vision">
+                        <p>La Visión de Grupo Servyre es la de hacer crecer las capacidades de creación y servicio,
+                            contribuyendo al desarrollo personal de todos los que integran nuestra organización teniendo
+                            como características:
+                            Institucional y dirigida profesionalmente.
+                            Con una organización eficiente e integrada por personas comprometidas.
+                            Con una estructura sana para responder con oportunidad a los retos del negocio.
+                            Reconocida por su experiencia, competencia y responsabilidad social.</p>
                     </div>
-                    <h3>Ingeniería de Tránsito</h3>
-                    <p>Proyectos y Diseño de Ingeniería, Supervisión de Obra.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Semaforización</h3>
-                    <p>Detección Vehicular, Software Especializado en Gestión Semafórica, Semáforos, Controles
-                        Semafóricos, Gabinetes, Cámaras de Video Detección, Detectores de Piso, Antenas GPS.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Limpieza Institucional Especializada</h3>
-                    <p>Limpieza de Oficinas, Jardinería, Plomería, Electricidad, Pintura, Insumos de Limpieza, Jarcería.
-                    </p>
-                </div>
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-broadcast-tower"></i>
-                    </div>
-                    <h3>Señalamiento Vial</h3>
-                    <p>Señalamiento Vertical, Señalamiento Horizontal, Dispositivos de Obra.</p>
-                </div>
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h3>Publicidad</h3>
-                    <p>Rótulos, Parabuses, Espectaculares, Campañas Publicitarias en Señales de Vialidad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="productos" class="products">
-        <div class="container">
-            <h2>Productos</h2>
-            <div class="products-grid">
-                <div class="product-card product-card--tall">
-                    <h3>(ITS) Sistemas Inteligentes de Transporte</h3>
-                    <p>Software de Gestión de Tránsito, Fotomultas, VMS, Aforo Vehicular, ALPR, CCTV, Radares, Básculas
-                        Dinámicas, Telecomunicaciones, Detección de Incidentes y Dispositivos S.O.S.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Sistemas de Transporte Público</h3>
-                    <p>SAE para Autobuses, Recaudo.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Sistemas de Transporte</h3>
-                    <p>Ferroviarios, Aeropuertos, Puertos.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Sistemas de Contención</h3>
-                    <p>Defensa metálica, Barrera de cable, Concreto, Mallas, Vallas Antideslumbrantes, Gaviones, Reja de Acero.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Peaje, Telepeaje y Videotolling</h3>
-                    <p>Barreras Automáticas, OCR, RFID, Sensores de piso.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Sistemas de Seguridad</h3>
-                    <p>CCTV, PTZ, Video Análisis, Control de Acceso Biométrico y RFID.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Sistemas Inteligentes de Estacionamientos</h3>
-                    <p>Parquímetros y Estacionamientos.</p>
-                </div>
-                <div class="product-card">
-                    <h3>Energía Renovable</h3>
-                    <p>Luminarias LED y Energía Solar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contáctanos</h2>
-            <div class="contact-flex">
-                <div class="contact-texts">
-                    <h3>Ubicación</h3>
-                    <div class="contact-item">
-                        <img src="assets/icons/location.svg" alt="Ubicacion" class="icon">
-                        <p>P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120 Ciudad
-                            de México, CDMX</p>
-                    </div>
-                </div>
-                <div class="contact-texts">
-                    <h3>Contacto</h3>
-                    <div class="contact-item">
-                        <img src="assets/icons/phone.svg" alt="Telefono" class="icon">
-                        <a href="tel:8008223484">800 822 3484</a>
-                    </div>
-                    <div class="contact-item">
-                        <img src="assets/icons/whatsapp.svg" alt="Telefono" class="icon">
-                        <a href="https://wa.me/525514739833" target="_blank">Whatsapp</a>
-                    </div>
-                    <div class="contact-item">
-                        <img src="assets/icons/email.svg" alt="Correo" class="icon">
-                        <a
-                            href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre...">Correo
-                            electrónico</a>
-                    </div>
-                </div>
-                <div class="contact-texts">
-                    <h3>Bolsa de Trabajo</h3>
-                    <div class="contact-item">
-                        <img src="assets/icons/job.svg" alt="Correo" class="icon">
-                        <a href="https://mx.indeed.com/cmp/Grupo-Servyre-S.a-De-C.v" target="_blank">Vacantes en Servyre
-                            - Indeed</a>
+                    <div class="mvv__text" data-id="valores">
+                        <p>Grupo Servyre está cimentada en valores fundamentales y creemos en:
+                            El trabajo como crecimiento personal y medio de satisfacción de necesidades.
+                            La honestidad, como principio de unidad y de lealtad.
+                            El respeto, como condición en el trato con los demás.
+                            El compromiso, como servicio a los demás y signo de colaboración.
+                            Los resultados, como expresión de profesionalismo y responsabilidad.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-        <a href="#inicio" class="btn--inicio" aria-label="Volver al inicio de la página">
-            <img src="assets/icons/angle-up.svg" class="icon" alt="">
-            Volver a Inicio
-        </a>
-        <div class="wave"></div>
-    </section>
+        <!-- Services Section -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-traffic-light"></i>
+                        </div>
+                        <h3>Infraestructura y Mantenimiento Vial</h3>
+                        <p>Repavimentación, Bacheo, Alcantarillado, Estructuras Metálicas, Mantenimiento Urbano, Obra
+                            Civil, Guarniciones y Banquetas, Mantenimiento y Conservación.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3>Ingeniería de Tránsito</h3>
+                        <p>Proyectos y Diseño de Ingeniería, Supervisión de Obra.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Semaforización</h3>
+                        <p>Detección Vehicular, Software Especializado en Gestión Semafórica, Semáforos, Controles
+                            Semafóricos, Gabinetes, Cámaras de Video Detección, Detectores de Piso, Antenas GPS.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Limpieza Institucional Especializada</h3>
+                        <p>Limpieza de Oficinas, Jardinería, Plomería, Electricidad, Pintura, Insumos de Limpieza,
+                            Jarcería.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h3>Señalamiento Vial</h3>
+                        <p>Señalamiento Vertical, Señalamiento Horizontal, Dispositivos de Obra.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <h3>Publicidad</h3>
+                        <p>Rótulos, Parabuses, Espectaculares, Campañas Publicitarias en Señales de Vialidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos" class="products">
+            <div class="container">
+                <h2>Productos</h2>
+                <div class="products-grid">
+                    <div class="product-card product-card--tall">
+                        <h3>(ITS) Sistemas Inteligentes de Transporte</h3>
+                        <p>Software de Gestión de Tránsito, Fotomultas, VMS, Aforo Vehicular, ALPR, CCTV, Radares,
+                            Básculas Dinámicas, Telecomunicaciones, Detección de Incidentes y Dispositivos S.O.S.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Sistemas de Transporte Público</h3>
+                        <p>SAE para Autobuses, Recaudo.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Sistemas de Transporte</h3>
+                        <p>Ferroviarios, Aeropuertos, Puertos.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Sistemas de Contención</h3>
+                        <p>Defensa metálica, Barrera de cable, Concreto, Mallas, Vallas Antideslumbrantes, Gaviones,
+                            Reja de Acero.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Peaje, Telepeaje y Videotolling</h3>
+                        <p>Barreras Automáticas, OCR, RFID, Sensores de piso.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Sistemas de Seguridad</h3>
+                        <p>CCTV, PTZ, Video Análisis, Control de Acceso Biométrico y RFID.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Sistemas Inteligentes de Estacionamientos</h3>
+                        <p>Parquímetros y Estacionamientos.</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Energía Renovable</h3>
+                        <p>Luminarias LED y Energía Solar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
 
     <!-- Footer -->
+    <!-- Contact Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 SERVYRE. Todos los derechos reservados.</p>
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <div class="contact-flex">
+                    <div class="contact-texts">
+                        <h3>Ubicación</h3>
+                        <div class="contact-item">
+                            <img src="assets/icons/location.svg" alt="Ubicacion" class="icon">
+                            <p>P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120
+                                Ciudad
+                                de México, CDMX</p>
+                        </div>
+                    </div>
+                    <div class="contact-texts">
+                        <h3>Contacto</h3>
+                        <div class="contact-item">
+                            <img src="assets/icons/phone.svg" alt="Telefono" class="icon">
+                            <a href="tel:8008223484">800 822 3484</a>
+                        </div>
+                        <div class="contact-item">
+                            <img src="assets/icons/whatsapp.svg" alt="Telefono" class="icon">
+                            <a href="https://wa.me/525514739833" target="_blank">Whatsapp</a>
+                        </div>
+                        <div class="contact-item">
+                            <img src="assets/icons/email.svg" alt="Correo" class="icon">
+                            <a
+                                href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre...">Correo
+                                electrónico</a>
+                        </div>
+                    </div>
+                    <div class="contact-texts">
+                        <h3>Bolsa de Trabajo</h3>
+                        <div class="contact-item">
+                            <img src="assets/icons/job.svg" alt="Correo" class="icon">
+                            <a href="https://mx.indeed.com/cmp/Grupo-Servyre-S.a-De-C.v" target="_blank">Vacantes en
+                                Servyre
+                                - Indeed</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a href="#inicio" class="btn--inicio" aria-label="Volver al inicio de la página">
+                <img src="assets/icons/angle-up.svg" class="icon" alt="">
+                Volver a Inicio
+            </a>
+            <div class="wave"></div>
+        </section>
+
+        <div class="footer">
+            <div class="container">
+                <p>&copy; 2026 SERVYRE. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 

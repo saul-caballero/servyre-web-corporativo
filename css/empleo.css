@@ -212,7 +212,7 @@
 .btn-secundario {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--dark-color);
     padding: 12px 24px;
     border-radius: 5px;
     font-family: var(--font-heading);
@@ -354,6 +354,10 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.form__btns button[type="submit"]{
+    color: var(--dark-color);
 }
 
 .form__btns button:hover {

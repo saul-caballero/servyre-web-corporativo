@@ -1,6 +1,5 @@
 /* About Section */
 .empresa-section {
-    padding: 100px 0;
     background-color: #fff;
 }
 
@@ -8,6 +7,7 @@
     font-size: 2.5rem;
     color: var(--dark-color);
     border-bottom: 3px solid var(--primary-color);
+    padding: var(--section-padding);
     padding-bottom: 15px;
     margin-bottom: 50px;
     font-family: var(--font-heading);

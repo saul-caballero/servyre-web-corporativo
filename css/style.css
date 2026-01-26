@@ -75,7 +75,7 @@ p {
     display: inline-block;
     padding: 12px 30px;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--dark-color);
     border-radius: 5px;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -86,7 +86,6 @@ p {
 }
 
 .btn:hover {
-    color: var(--dark-color);
     box-shadow: var(--shadow);
     transform: translateY(-2px);
 }
@@ -457,7 +456,7 @@ nav {
 
 .mvv__button--active {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--dark-color);
     border-color: var(--primary-color);
     box-shadow: var(--shadow);
     font-weight: bold;
@@ -524,7 +523,7 @@ nav {
 .service-card h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 .service-card p {

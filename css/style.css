@@ -76,7 +76,6 @@ p {
     padding: 12px 30px;
     background-color: var(--primary-color);
     color: var(--dark-color);
-    border-radius: 5px;
     font-family: var(--font-heading);
     font-weight: 600;
     text-transform: uppercase;

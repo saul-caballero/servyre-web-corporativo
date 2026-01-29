@@ -7,9 +7,9 @@
 .empresa-header h1 {
     font-size: 2.5rem;
     color: var(--dark-color);
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding: var(--section-padding);
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     margin-bottom: 50px;
     font-family: var(--font-heading);
 }
@@ -801,40 +801,436 @@
 
 /* Ubication Section */
 
-*{
-    outline: 1px solid red;
-}
-
-.ubication{
-    min-height: 100vh;
+.ubication {
     width: 100%;
-    padding: var(--section-padding);
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.ubication h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    font-family: var(--font-heading);
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.ubication h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Layout Grid - 3 columnas en la misma fila */
+.ubication-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 25px;
+    align-items: stretch;
 }
 
 
-.ubication-content{
+/* Mapa de Google */
+.ubication-map {
+    width: 100%;
+    height: 350px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.ubication-map:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+.ubication-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Información de Contacto - Ubication*/
+.ubication-info {
+    padding: 10px;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    border-radius: 6px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    height: auto;
+    flex-direction: column;
 }
 
-.ubication-content p {
+.ubication-info:hover {
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+}
+
+.ubication-address {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.ubication-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     flex: 1;
 }
 
-.ubication-picture{
-    flex: 2;
-    min-width: 300px;
-    width: 100%;
+.ubication-contact .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.ubication-picture iframe{
+.ubication-contact .contact-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    background-color: #fefefe;
+}
+
+.ubication-contact .contact-item .icon--ubication {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    filter: brightness(0) saturate(100%);
+    transition: filter 0.3s ease;
+}
+
+.ubication-contact .contact-item:hover .icon--ubication {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(47%) saturate(523%) hue-rotate(359deg) brightness(98%) contrast(94%);
+}
+
+.ubication-contact .contact-item a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.ubication-contact .contact-item:hover a {
+    color: var(--primary-color);
+}
+
+
+/* Imagen del Edificio */
+.ubication-image {
+    width: 100%;
+    height: 350px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.ubication-image:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+.ubication-image img {
     width: 100%;
     height: 100%;
-    width: 100%;
-    height: 100%;
-    min-height: 250px;
-    min-width: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ubication-image:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Responsive - Tablets Grandes */
+@media (max-width: 1200px) {
+    .ubication {
+        padding: 55px 0;
+    }
+
+    .ubication h2 {
+        font-size: 2.3rem;
+        margin-bottom: 35px;
+    }
+
+    .ubication-content {
+        gap: 22px;
+    }
+
+    .ubication-map,
+    .ubication-image {
+        height: 320px;
+    }
+
+    .ubication-info {
+        padding: 22px;
+    }
+}
+
+
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+    .ubication {
+        padding: 50px 0;
+    }
+
+    .ubication h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    /* Cambiar a 2 columnas: Mapa + Info, luego Imagen debajo */
+    .ubication-content {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 22px;
+    }
+
+    .ubication-map {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        height: auto;
+        min-height: 380px;
+        border-radius: 6px;
+    }
+
+    .ubication-info {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 20px;
+        border-radius: 6px;
+    }
+
+    .ubication-address {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+    }
+
+    .ubication-contact {
+        gap: 11px;
+    }
+
+    .ubication-contact .contact-item {
+        padding: 11px 12px;
+        border-radius: 6px;
+    }
+
+    .ubication-contact .contact-item a {
+        font-size: 0.93rem;
+    }
+
+    .ubication-image {
+        grid-column: 2;
+        grid-row: 2;
+        height: 240px;
+        border-radius: 6px;
+    }
+}
+
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .ubication {
+        padding: 50px 0;
+    }
+
+    .ubication h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        padding-bottom: 12px;
+    }
+
+    .ubication h2::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    /* Layout en una columna */
+    .ubication-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 22px;
+    }
+
+    .ubication-map,
+    .ubication-info,
+    .ubication-image {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .ubication-map {
+        height: 300px;
+        border-radius: 6px;
+    }
+
+    .ubication-info {
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 6px;
+    }
+
+    .ubication-address {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+    }
+
+    .ubication-contact {
+        gap: 12px;
+    }
+
+    .ubication-contact .contact-item {
+        padding: 11px;
+    }
+
+    .ubication-image {
+        height: 220px;
+        border-radius: 8px;
+    }
+}
+
+
+/* Responsive - Móviles Pequeños */
+@media (max-width: 480px) {
+    .ubication {
+        padding: 40px 0;
+    }
+
+    .ubication h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+
+    .ubication h2::after {
+        width: 50px;
+    }
+
+    .ubication-content {
+        gap: 18px;
+    }
+
+    .ubication-map {
+        height: 260px;
+        border-radius: 6px;
+    }
+
+    .ubication-info {
+        padding: 18px;
+        border-radius: 6px;
+    }
+
+    .ubication-address {
+        font-size: 0.93rem;
+        margin-bottom: 16px;
+        line-height: 1.6;
+    }
+
+    .ubication-contact {
+        gap: 10px;
+    }
+
+    .ubication-contact .contact-item {
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .ubication-contact .contact-item .icon--ubication {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ubication-contact .contact-item a {
+        font-size: 0.88rem;
+    }
+
+    .ubication-image {
+        height: 200px;
+        border-radius: 6px;
+    }
+}
+
+
+/* Responsive - Móviles Muy Pequeños */
+@media (max-width: 360px) {
+    .ubication {
+        padding: 35px 0;
+    }
+
+    .ubication h2 {
+        font-size: 1.3rem;
+        margin-bottom: 22px;
+    }
+
+    .ubication-map {
+        height: 240px;
+    }
+
+    .ubication-info {
+        padding: 16px;
+    }
+
+    .ubication-address {
+        font-size: 0.9rem;
+    }
+
+    .ubication-contact .contact-item {
+        padding: 9px;
+    }
+
+    .ubication-contact .contact-item .icon--ubication {
+        width: 18px;
+        height: 18px;
+    }
+
+    .ubication-contact .contact-item a {
+        font-size: 0.85rem;
+    }
+
+    .ubication-image {
+        height: 180px;
+    }
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+    .ubication-map,
+    .ubication-info,
+    .ubication-image,
+    .ubication-contact .contact-item,
+    .ubication-image img {
+        transition: none;
+        transform: none;
+    }
+
+    .ubication-contact .contact-item:hover {
+        transform: none;
+    }
+
+    .ubication-image:hover img {
+        transform: none;
+    }
 }

@@ -651,14 +651,59 @@ nav {
 .carousel-btn img {
     width: 20px;
     height: 20px;
-    filter: none;
-    /* Assuming dark icons */
+    filter: brightness(0);
+    /* Force black icon for visibility on light button */
+}
+
+.carousel-btn--prev {
+    left: 20px;
+}
+
+.carousel-btn--next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+.indicator.active {
+    background-color: var(--white);
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* MISIÓN, VISIÓN, VALORES - Tab Bar Style */
 .mvv__component {
     width: 100%;
-    padding: 80px 20px;
+    padding: 60px 20px 20px;
+    /* Reduced bottom padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -673,7 +718,12 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 100%;
+    /* Changed from fit-content to allow centering in flex parent if needed, but flex parent handles it */
+    max-width: fit-content;
+    /* Ensure the background only wraps the buttons */
+    margin: 0 auto;
+    /* Explicit centering */
     gap: 4px;
     /* Connected buttons */
     background: rgba(118, 118, 128, 0.12);
@@ -717,20 +767,52 @@ nav {
 .mvv__text {
     display: none;
     opacity: 0;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 24px;
     transition: opacity 0.4s ease;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    /* Elegant card shadow */
+    margin-top: 20px;
+}
+
+.mvv__text--active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
 }
 
 .mvv__text p {
-    font-size: 21px;
-    line-height: 1.5;
+    font-size: 19px;
+    line-height: 1.6;
     color: var(--text-color);
-    text-align: center;
-    font-weight: 500;
+    text-align: left;
+    /* Better readability for paragraphs */
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Add support for centering usually short mission statements roughly */
+@media (min-width: 768px) {
+    .mvv__text p {
+        text-align: center;
+    }
 }
 
 /* SERVICES SECTION - Grid Cards */

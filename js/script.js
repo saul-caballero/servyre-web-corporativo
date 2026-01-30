@@ -6,27 +6,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle menu
     mobileToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        const icon = mobileToggle.querySelector('i');
+        const icon = mobileToggle.querySelector('img');
         if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+            icon.src = 'assets/icons/close.svg';
+            icon.alt = 'cerrar menu';
         } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            icon.src = 'assets/icons/toggle.svg';
+            icon.alt = 'menu';
         }
     });
 
-    // Close menu when clicking a link
+    // Cerrar cuando dan click en el menu
     links.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            const icon = mobileToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            const icon = mobileToggle.querySelector('img');
+            icon.src = 'assets/icons/toggle.svg';
+            icon.alt = 'menu';
         });
     });
 
-    // Smooth scroll for anchor links (if not supported natively by css)
+    // Scroll lento al seleccionar (efecto)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple scroll reveal effect
+    // Scroll simple (efecto)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('section').forEach(section => {
-        section.classList.add('fade-in-section'); // Add CSS class for animation start state
+        section.classList.add('fade-in-section');
         observer.observe(section);
     });
 });

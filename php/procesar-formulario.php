@@ -106,9 +106,9 @@ try {
     $nombre_archivo_original = basename($archivo['name']);
     $extension = strtolower(pathinfo($nombre_archivo_original, PATHINFO_EXTENSION));
     
-    $extensiones_permitidas = ['pdf', 'doc', 'docx'];
+    $extensiones_permitidas = ['pdf'];
     if (!in_array($extension, $extensiones_permitidas)) {
-        throw new Exception('Solo se permiten archivos PDF, DOC o DOCX');
+        throw new Exception('Solo se permiten archivos PDF.');
     }
 
     // PROTECCIÓN 8: Verificar tipo MIME real del archivo
@@ -117,9 +117,7 @@ try {
     finfo_close($finfo);
 
     $mimes_permitidos = [
-        'application/pdf',
-        'application/msword',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        'application/pdf'
     ];
 
     if (!in_array($mime_real, $mimes_permitidos)) {

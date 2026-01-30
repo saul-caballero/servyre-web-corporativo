@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Conoce la historia de Grupo Servyre, fundada en 1971. Más de 50 años liderando proyectos de infraestructura vial en México. Descubre nuestras obras destacadas y principales clientes.">
-    <title>SERVYRE - Empresa</title>
+        content="SERVYRE - Líderes en infraestructura vial en México. Especialistas en señalización, semaforización, mantenimiento vial y sistemas inteligentes de transporte. Más de 50 años de experiencia.">
+    <!-- PRELOAD de fuentes críticas (opcional pero recomendado) -->
+    <link rel="preload" href="assets/fonts/roboto/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- CSS de fuentes PRIMERO -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- CSS principal DESPUÉS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700;900&display=swap"
-        rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="img/favicon-servyre.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="img/favicon-servyre.png">
+
+    <title>SERVYRE - Infraestructura Vial</title>
+
 </head>
 
 <body>
@@ -40,317 +42,332 @@
         </div>
     </header>
 
-    <!-- Empresa Section -->
-    <section id="inicio" class="empresa-section">
-        <div class="container">
-            <div class="empresa-header">
-                <h1>Nuestra Historia</h1>
-            </div>
+    <main>
+        <!-- Empresa Section -->
+        <section id="inicio" class="empresa-section">
+            <div class="container">
+                <div class="empresa-header">
+                    <h1>Nuestra Historia</h1>
+                </div>
 
-            <div class="empresa-content">
-                <div class="empresa-text">
+                <div class="empresa-content">
+                    <div class="empresa-text">
+                        <p>
+                            Grupo Servyre fué fundado en 1971 y cuenta con millones de kilómetros conservados,
+                            mantenidos y señalizados a lo largo de México. Actualmente, somos uno de los principales
+                            líderes
+                            a nivel nacional en conservación, mantenimiento e inteligencia de tránsito, así como
+                            especialistas
+                            en proyectos de infraestructura vial. Nos consolidamos como una de las empresas más
+                            importantes
+                            proveedoras en el mercado de la ingeniería de tránsito, atendiendo a gobiernos federales,
+                            estatales y municipales, además de clientes del sector privado.
+                        </p>
+                    </div>
+
+                    <figure class="empresa-image">
+                        <img src="img/grupo-servyre.jpg" alt="Trabajadores de Grupo Servyre" title="Grupo Servyre"
+                            loading="lazy">
+                    </figure>
+                </div>
+
+                <div class="empresa-footer">
                     <p>
-                        Grupo Servyre fué fundado en 1971 y cuenta con millones de kilómetros conservados,
-                        mantenidos y señalizados a lo largo de México. Actualmente, somos uno de los principales líderes
-                        a nivel nacional en conservación, mantenimiento e inteligencia de tránsito, así como
-                        especialistas
-                        en proyectos de infraestructura vial. Nos consolidamos como una de las empresas más importantes
-                        proveedoras en el mercado de la ingeniería de tránsito, atendiendo a gobiernos federales,
-                        estatales y municipales, además de clientes del sector privado.
+                        Durante la última década, hemos participado en más de 10 mil millones de pesos en contratos de
+                        infraestructura vial, lo que respalda nuestra experiencia y capacidad operativa.
+                        Contamos con una planta de fabricación ubicada en el Estado de México, con una superficie
+                        superior a
+                        140,000 m², equipada con tecnología de vanguardia para la fabricación de sistemas de seguridad y
+                        señalamiento vial.
                     </p>
                 </div>
-
-                <figure class="empresa-image">
-                    <img src="img/grupo-servyre.jpg" alt="Trabajadores de Grupo Servyre" title="Grupo Servyre"
-                        loading="lazy">
-                </figure>
             </div>
+        </section>
 
-            <div class="empresa-footer">
-                <p>
-                    Durante la última década, hemos participado en más de 10 mil millones de pesos en contratos de
-                    infraestructura vial, lo que respalda nuestra experiencia y capacidad operativa.
-                    Contamos con una planta de fabricación ubicada en el Estado de México, con una superficie superior a
-                    140,000 m², equipada con tecnología de vanguardia para la fabricación de sistemas de seguridad y
-                    señalamiento vial.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experince Banner -->
-    <section class="experience-section">
-        <div class="experience-overlay"></div>
-        <div class="container">
-            <div class="experience-content">
-                <h2 class="experience-title">Más de 50 años de experiencia liderando la infraestructura vial en México
-                </h2>
-                <p class="experience-subtitle">
-                    Innovamos día con día para ofrecer soluciones integrales que abarcan el diseño, fabricación,
-                    suministro, colocación, mantenimiento y desarrollo de software de nuestros servicios, sistemas y
-                    productos.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="container">
-            <h2>Obras Destacadas</h2>
-            <p class="timeline-subtitle">Momentos clave que marcaron nuestra trayectoria</p>
-
-            <div class="timeline">
-                <!-- Item 1: Texto -> Línea -> Imagen -->
-                <div class="timeline-item timeline-item--right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">1979</div>
-                        <h3>Señalización Ejes Viales, CDMX</h3>
-                        <p>Implementación del sistema de señalización en los principales ejes viales de la Ciudad de
-                            México, marcando el inicio de nuestra trayectoria en infraestructura urbana.</p>
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-image">
-                        <img src="img/timeline-1.webp" loading="lazy" alt="Señalización Ejes Viales CDMX en 1979">
-                    </div>
-                </div>
-
-                <!-- Item 2: Imagen -> Línea -> Texto -->
-                <div class="timeline-item timeline-item--left">
-                    <div class="timeline-image">
-                        <img src="img/timeline-2.webp" loading="lazy" alt="Peaje Automático CAPUFE en 1991">
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">1991</div>
-                        <h3>Instalación de Peaje Automático CAPUFE</h3>
-                        <p>Pioneros en la implementación de sistemas de peaje automatizado en las principales autopistas
-                            del país, optimizando el flujo vehicular.</p>
-                    </div>
-                </div>
-
-                <!-- Item 3: Texto -> Línea -> Imagen -->
-                <div class="timeline-item timeline-item--right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">1996</div>
-                        <h3>Instalación de Semáforos Guadalajara</h3>
-                        <p>Modernización del sistema de semaforización en Guadalajara, mejorando significativamente la
-                            movilidad urbana en la segunda ciudad más importante del país.</p>
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-image">
-                        <img src="img/timeline-3.webp" loading="lazy" alt="Semáforos Guadalajara en 1996">
-                    </div>
-                </div>
-
-                <!-- Item 4: Imagen -> Línea -> Texto -->
-                <div class="timeline-item timeline-item--left">
-                    <div class="timeline-image">
-                        <img src="img/timeline-4.webp" loading="lazy" alt="Sistema SAE Macrobús en 2012">
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2012</div>
-                        <h3>Sistema SAE, Macrobús, Guadalajara</h3>
-                        <p>Implementación del sistema de ayuda a la explotación para el Macrobús, revolucionando el
-                            transporte público en la zona metropolitana de Guadalajara.</p>
-                    </div>
-                </div>
-
-                <!-- Item 5: Texto -> Línea -> Imagen -->
-                <div class="timeline-item timeline-item--right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2013</div>
-                        <h3>Instalación ITS (Michoacán – Lázaro Cárdenas)</h3>
-                        <p>Despliegue de sistemas inteligentes de transporte en el corredor Michoacán-Lázaro Cárdenas,
-                            mejorando la seguridad y eficiencia del tráfico vehicular.</p>
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-image">
-                        <img src="img/timeline-5.webp" loading="lazy" alt="Instalación ITS Michoacán en 2013">
-                    </div>
-                </div>
-
-                <!-- Item 6: Imagen -> Línea -> Texto -->
-                <div class="timeline-item timeline-item--left">
-                    <div class="timeline-image">
-                        <img src="img/timeline-6.webp" loading="lazy" alt="APP Conservación del tramo Saltillo en 2017">
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2017 - Actual</div>
-                        <h3>APP Conservación del tramo Saltillo – Mty. – La Gloria</h3>
-                        <p>Contrato vigente de conservación y mantenimiento integral del importante corredor noreste,
-                            garantizando la seguridad y calidad de la infraestructura.</p>
-                    </div>
-                </div>
-
-                <!-- Item 7: Texto -> Línea -> Imagen -->
-                <div class="timeline-item timeline-item--right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <h3>Centro Nacional de Control, CAPUFE</h3>
-                        <p>Desarrollo e implementación del Centro Nacional de Control de CAPUFE, centralizando la
-                            gestión y monitoreo de la red carretera nacional.</p>
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-image">
-                        <img src="img/timeline-7.webp" loading="lazy" alt="Centro Nacional de Control, CAPUFE en 2018">
-                    </div>
-                </div>
-
-                <!-- Item 8: Imagen -> Línea -> Texto -->
-                <div class="timeline-item timeline-item--left">
-                    <div class="timeline-image">
-                        <img src="img/timeline-8.webp" loading="lazy" alt="Barranca Larga - La Ventanilla en 2024">
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
-                        <h3>Señalamiento y sistemas de contención Barranca Larga – La Ventanilla</h3>
-                        <p>Proyecto integral de señalización y sistemas de seguridad vial en uno de los tramos más
-                            importantes de la costa oaxaqueña.</p>
-                    </div>
-                </div>
-
-                <!-- Item 9: Texto -> Línea -> Imagen -->
-                <div class="timeline-item timeline-item--right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2025</div>
-                        <h3>ITS Autopista Real del Monte - Huasca</h3>
-                        <p>Implementación de tecnología de vanguardia en sistemas inteligentes de transporte para la
-                            autopista Real del Monte - Huasca, Hidalgo.</p>
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-image">
-                        <img src="img/timeline-9.webp" loading="lazy"
-                            alt="ITS Autopista Real del Monte en Huasca Hidalgo en 2025">
-                    </div>
-                </div>
-
-                <!-- Item 10: Imagen -> Línea -> Texto -->
-                <div class="timeline-item timeline-item--left">
-                    <div class="timeline-image">
-                        <img src="img/timeline-10.webp" loading="lazy" alt="Contratos continuos desde 2025">
-                    </div>
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2025 - Actual</div>
-                        <h3>Contratos de Señalamiento Vial, Sistemas de Contención, Mantenimiento y Conservación</h3>
-                        <p>Alianzas estratégicas continuas con la SCT, CAPUFE y principales constructoras del país,
-                            consolidando nuestra posición como líder en infraestructura vial.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Clients Section -->
-    <section class="clients-section">
-        <div class="container">
-            <div class="clients-text">
-                <h2>Nuestros Principales Clientes Nacionales</h2>
-            </div>
-            <div class="clients-logos">
-                <img class="logo-item" src="img/client-1.webp" loading="lazy"
-                    alt="Secretaría de Infraestructura, Comunicaciones y Transportes">
-                <img class="logo-item" src="img/client-2.webp" loading="lazy"
-                    alt="Renacimiento Maya, Yucatán. Gobierno del Estado">
-                <img class="logo-item" src="img/client-3.webp" loading="lazy"
-                    alt="Secretaría de Infraestructura, Nuevo León">
-                <img class="logo-item" src="img/client-4.webp" loading="lazy"
-                    alt="Caminos y Puentes Federales, CAPUFE.">
-                <img class="logo-item" src="img/client-5.webp" loading="lazy"
-                    alt="Sistema de Tren Eléctrico Urbano, SITEUR">
-                <img class="logo-item" src="img/client-6.webp" loading="lazy"
-                    alt="Banco Nacional de Obras y Servicios Públicos S.N.C, BANOBRAS">
-                <img class="logo-item" src="img/client-7.webp" loading="lazy"
-                    alt="Secretaría de Desarrollo Urbano y Obras Públicas, Querétaro">
-                <img class="logo-item" src="img/client-8.webp" loading="lazy" alt="Capital de la Tranformación, CDMX">
-                <img class="logo-item" src="img/client-9.webp" loading="lazy" alt="Gobierno del Estado de México">
-                <img class="logo-item" src="img/client-10.webp" loading="lazy"
-                    alt="Red de Carreteras de Occidente, RCO an Abertis Company">
-                <img class="logo-item" src="img/client-12.webp" loading="lazy"
-                    alt="Impulsora del Desarrollo y el Empleo en América Latina, IDEAL">
-                <img class="logo-item" src="img/client-13.webp" loading="lazy" alt="Mota-Engil">
-                <img class="logo-item" src="img/client-11.webp" loading="lazy" alt="Empresas ICA">
-            </div>
-        </div>
-    </section>
-
-
-<!-- Ubication Section -->
-<section id="ubicacion" class="ubication">
-    <div class="container">
-        <h2>Nuestro Corporativo</h2>
-        <div class="ubication-content">
-            <!-- Mapa de Google -->
-            <div class="ubication-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5710879792905!2d-99.2525259!3d19.387715900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201199d45a7a1%3A0x91518890b55d413e!2sServyre%20Santa%20Fe!5e0!3m2!1ses!2smx!4v1769574440761!5m2!1ses!2smx"
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de Servyre Santa Fe en Google Maps"
-                    aria-label="Mapa de ubicación de Servyre Santa Fe">
-                </iframe>
-            </div>
-            <!-- Información de contacto -->
-            <div class="ubication-info">
-                <p class="ubication-address">
-                    P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120, CDMX
-                </p>
-                <div class="ubication-contact">
-                    <div class="contact-item">
-                        <img src="assets/icons/phone.svg" alt="Icono de teléfono" class="icon icon--ubication">
-                        <a href="tel:8008223484" aria-label="Llamar al 800 822 3484">800 822 3484</a>
-                    </div>
-                    <div class="contact-item">
-                        <img src="assets/icons/whatsapp.svg" alt="Icono de WhatsApp" class="icon icon--ubication">
-                        <a href="https://wa.me/525514739833" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-                            WhatsApp
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <img src="assets/icons/email.svg" alt="Icono de correo electrónico" class="icon icon--ubication">
-                        <a href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre..." aria-label="Enviar correo electrónico">
-                            Correo electrónico
-                        </a>
-                    </div>
+        <!-- Experince Banner -->
+        <section class="experience-section">
+            <div class="experience-overlay"></div>
+            <div class="container">
+                <div class="experience-content">
+                    <h2 class="experience-title">Más de 50 años de experiencia liderando la infraestructura vial en
+                        México
+                    </h2>
+                    <p class="experience-subtitle">
+                        Innovamos día con día para ofrecer soluciones integrales que abarcan el diseño, fabricación,
+                        suministro, colocación, mantenimiento y desarrollo de software de nuestros servicios, sistemas y
+                        productos.
+                    </p>
                 </div>
             </div>
-            <!-- Imagen del edificio -->
-            <div class="ubication-image">
-                <img src="img/ubication-image.webp" 
-                     alt="Edificio corporativo de Servyre en Bosques de las Lomas" 
-                     loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <div class="container">
+                <h2>Obras Destacadas</h2>
+                <p class="timeline-subtitle">Momentos clave que marcaron nuestra trayectoria</p>
+
+                <div class="timeline">
+                    <!-- Item 1: Texto -> Línea -> Imagen -->
+                    <div class="timeline-item timeline-item--right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">1979</div>
+                            <h3>Señalización Ejes Viales, CDMX</h3>
+                            <p>Implementación del sistema de señalización en los principales ejes viales de la Ciudad de
+                                México, marcando el inicio de nuestra trayectoria en infraestructura urbana.</p>
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="img/timeline-1.webp" loading="lazy" alt="Señalización Ejes Viales CDMX en 1979">
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Imagen -> Línea -> Texto -->
+                    <div class="timeline-item timeline-item--left">
+                        <div class="timeline-image">
+                            <img src="img/timeline-2.webp" loading="lazy" alt="Peaje Automático CAPUFE en 1991">
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1991</div>
+                            <h3>Instalación de Peaje Automático CAPUFE</h3>
+                            <p>Pioneros en la implementación de sistemas de peaje automatizado en las principales
+                                autopistas
+                                del país, optimizando el flujo vehicular.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Texto -> Línea -> Imagen -->
+                    <div class="timeline-item timeline-item--right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">1996</div>
+                            <h3>Instalación de Semáforos Guadalajara</h3>
+                            <p>Modernización del sistema de semaforización en Guadalajara, mejorando significativamente
+                                la
+                                movilidad urbana en la segunda ciudad más importante del país.</p>
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="img/timeline-3.webp" loading="lazy" alt="Semáforos Guadalajara en 1996">
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Imagen -> Línea -> Texto -->
+                    <div class="timeline-item timeline-item--left">
+                        <div class="timeline-image">
+                            <img src="img/timeline-4.webp" loading="lazy" alt="Sistema SAE Macrobús en 2012">
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2012</div>
+                            <h3>Sistema SAE, Macrobús, Guadalajara</h3>
+                            <p>Implementación del sistema de ayuda a la explotación para el Macrobús, revolucionando el
+                                transporte público en la zona metropolitana de Guadalajara.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Texto -> Línea -> Imagen -->
+                    <div class="timeline-item timeline-item--right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2013</div>
+                            <h3>Instalación ITS (Michoacán – Lázaro Cárdenas)</h3>
+                            <p>Despliegue de sistemas inteligentes de transporte en el corredor Michoacán-Lázaro
+                                Cárdenas,
+                                mejorando la seguridad y eficiencia del tráfico vehicular.</p>
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="img/timeline-5.webp" loading="lazy" alt="Instalación ITS Michoacán en 2013">
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Imagen -> Línea -> Texto -->
+                    <div class="timeline-item timeline-item--left">
+                        <div class="timeline-image">
+                            <img src="img/timeline-6.webp" loading="lazy"
+                                alt="APP Conservación del tramo Saltillo en 2017">
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2017 - Actual</div>
+                            <h3>APP Conservación del tramo Saltillo – Mty. – La Gloria</h3>
+                            <p>Contrato vigente de conservación y mantenimiento integral del importante corredor
+                                noreste,
+                                garantizando la seguridad y calidad de la infraestructura.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7: Texto -> Línea -> Imagen -->
+                    <div class="timeline-item timeline-item--right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2018</div>
+                            <h3>Centro Nacional de Control, CAPUFE</h3>
+                            <p>Desarrollo e implementación del Centro Nacional de Control de CAPUFE, centralizando la
+                                gestión y monitoreo de la red carretera nacional.</p>
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="img/timeline-7.webp" loading="lazy"
+                                alt="Centro Nacional de Control, CAPUFE en 2018">
+                        </div>
+                    </div>
+
+                    <!-- Item 8: Imagen -> Línea -> Texto -->
+                    <div class="timeline-item timeline-item--left">
+                        <div class="timeline-image">
+                            <img src="img/timeline-8.webp" loading="lazy" alt="Barranca Larga - La Ventanilla en 2024">
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Señalamiento y sistemas de contención Barranca Larga – La Ventanilla</h3>
+                            <p>Proyecto integral de señalización y sistemas de seguridad vial en uno de los tramos más
+                                importantes de la costa oaxaqueña.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 9: Texto -> Línea -> Imagen -->
+                    <div class="timeline-item timeline-item--right">
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <h3>ITS Autopista Real del Monte - Huasca</h3>
+                            <p>Implementación de tecnología de vanguardia en sistemas inteligentes de transporte para la
+                                autopista Real del Monte - Huasca, Hidalgo.</p>
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-image">
+                            <img src="img/timeline-9.webp" loading="lazy"
+                                alt="ITS Autopista Real del Monte en Huasca Hidalgo en 2025">
+                        </div>
+                    </div>
+
+                    <!-- Item 10: Imagen -> Línea -> Texto -->
+                    <div class="timeline-item timeline-item--left">
+                        <div class="timeline-image">
+                            <img src="img/timeline-10.webp" loading="lazy" alt="Contratos continuos desde 2025">
+                        </div>
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025 - Actual</div>
+                            <h3>Contratos de Señalamiento Vial, Sistemas de Contención, Mantenimiento y Conservación
+                            </h3>
+                            <p>Alianzas estratégicas continuas con la SCT, CAPUFE y principales constructoras del país,
+                                consolidando nuestra posición como líder en infraestructura vial.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Clients Section -->
+        <section class="clients-section">
+            <div class="container">
+                <div class="clients-text">
+                    <h2>Nuestros Principales Clientes Nacionales</h2>
+                </div>
+                <div class="clients-logos">
+                    <img class="logo-item" src="img/client-1.webp" loading="lazy"
+                        alt="Secretaría de Infraestructura, Comunicaciones y Transportes">
+                    <img class="logo-item" src="img/client-2.webp" loading="lazy"
+                        alt="Renacimiento Maya, Yucatán. Gobierno del Estado">
+                    <img class="logo-item" src="img/client-3.webp" loading="lazy"
+                        alt="Secretaría de Infraestructura, Nuevo León">
+                    <img class="logo-item" src="img/client-4.webp" loading="lazy"
+                        alt="Caminos y Puentes Federales, CAPUFE.">
+                    <img class="logo-item" src="img/client-5.webp" loading="lazy"
+                        alt="Sistema de Tren Eléctrico Urbano, SITEUR">
+                    <img class="logo-item" src="img/client-6.webp" loading="lazy"
+                        alt="Banco Nacional de Obras y Servicios Públicos S.N.C, BANOBRAS">
+                    <img class="logo-item" src="img/client-7.webp" loading="lazy"
+                        alt="Secretaría de Desarrollo Urbano y Obras Públicas, Querétaro">
+                    <img class="logo-item" src="img/client-8.webp" loading="lazy"
+                        alt="Capital de la Tranformación, CDMX">
+                    <img class="logo-item" src="img/client-9.webp" loading="lazy" alt="Gobierno del Estado de México">
+                    <img class="logo-item" src="img/client-10.webp" loading="lazy"
+                        alt="Red de Carreteras de Occidente, RCO an Abertis Company">
+                    <img class="logo-item" src="img/client-12.webp" loading="lazy"
+                        alt="Impulsora del Desarrollo y el Empleo en América Latina, IDEAL">
+                    <img class="logo-item" src="img/client-13.webp" loading="lazy" alt="Mota-Engil">
+                    <img class="logo-item" src="img/client-11.webp" loading="lazy" alt="Empresas ICA">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Ubication Section -->
+        <section id="ubicacion" class="ubication">
+            <div class="container">
+                <h2>Nuestro Corporativo</h2>
+                <div class="ubication-content">
+                    <!-- Mapa de Google -->
+                    <div class="ubication-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5710879792905!2d-99.2525259!3d19.387715900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201199d45a7a1%3A0x91518890b55d413e!2sServyre%20Santa%20Fe!5e0!3m2!1ses!2smx!4v1769574440761!5m2!1ses!2smx"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de Servyre Santa Fe en Google Maps"
+                            aria-label="Mapa de ubicación de Servyre Santa Fe">
+                        </iframe>
+                    </div>
+                    <!-- Información de contacto -->
+                    <div class="ubication-info">
+                        <p class="ubication-address">
+                            P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, Cuajimalpa de Morelos, 05120, CDMX
+                        </p>
+                        <div class="ubication-contact">
+                            <div class="contact-item">
+                                <img src="assets/icons/phone.svg" alt="Icono de teléfono" class="icon icon--ubication">
+                                <a href="tel:8008223484" aria-label="Llamar al 800 822 3484">800 822 3484</a>
+                            </div>
+                            <div class="contact-item">
+                                <img src="assets/icons/whatsapp.svg" alt="Icono de WhatsApp"
+                                    class="icon icon--ubication">
+                                <a href="https://wa.me/525514739833" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Contactar por WhatsApp">
+                                    WhatsApp
+                                </a>
+                            </div>
+                            <div class="contact-item">
+                                <img src="assets/icons/email.svg" alt="Icono de correo electrónico"
+                                    class="icon icon--ubication">
+                                <a href="mailto:info@servyre.com?subject=Consulta%20desde%20la%20Web&body=Hola,%20quisiera%20informaci%C3%B3n%20sobre..."
+                                    aria-label="Enviar correo electrónico">
+                                    Correo electrónico
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Imagen del edificio -->
+                    <div class="ubication-image">
+                        <img src="img/ubication-image.webp"
+                            alt="Edificio corporativo de Servyre en Bosques de las Lomas" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 
 
@@ -414,7 +431,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

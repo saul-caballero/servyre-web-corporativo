@@ -692,7 +692,8 @@ nav {
 /* MISIÓN, VISIÓN, VALORES - Tab Bar Style */
 .mvv__component {
     width: 100%;
-    padding: 80px 20px;
+    padding: 60px 20px 20px;
+    /* Reduced bottom padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -707,7 +708,12 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 100%;
+    /* Changed from fit-content to allow centering in flex parent if needed, but flex parent handles it */
+    max-width: fit-content;
+    /* Ensure the background only wraps the buttons */
+    margin: 0 auto;
+    /* Explicit centering */
     gap: 4px;
     /* Connected buttons */
     background: rgba(118, 118, 128, 0.12);

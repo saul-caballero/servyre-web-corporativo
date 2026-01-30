@@ -123,14 +123,14 @@ inputArchivo.addEventListener('change', function(e) {
         
         // Validar extensión
         const extension = archivo.name.split('.').pop().toLowerCase();
-        const extensionesValidas = ['pdf', 'doc', 'docx'];
+        const extensionesValidas = ['pdf'];
         
         if (!extensionesValidas.includes(extension)) {
-            divNombreArchivo.textContent = '❌ Solo PDF, DOC o DOCX';
+            divNombreArchivo.textContent = '❌ Solo PDF.';
             divNombreArchivo.style.color = '#ff0000';
             botonEnviar.disabled = true;
             inputArchivo.value = '';
-            mostrarNotificacion('error', 'Formato no válido', 'Solo se permiten archivos PDF, DOC o DOCX');
+            mostrarNotificacion('error', 'Formato no válido', 'Solo se permiten archivos PDF.');
             return;
         }
         
@@ -202,7 +202,7 @@ formulario.addEventListener('submit', async function(e) {
         try {
             // Obtener token de reCAPTCHA
             // Sitkey publica
-            const token = await grecaptcha.execute('6Lf_S04sAAAAACkuE8PuokEaac4umzslAxDRtOpp', {action: 'submit'});
+            const token = await grecaptcha.execute('6LcQclssAAAAAJUVE8jAD0_Kv6I3oDcExBtOUu34', {action: 'submit'});
             console.log('Verificación completada');
             
             // Preparar datos

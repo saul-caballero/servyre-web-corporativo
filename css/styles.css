@@ -707,9 +707,10 @@ nav {
 }
 
 .service-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 .service-card h3 {

@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Únete al equipo de Servyre. Envía tu CV y forma parte de una empresa líder en infraestructura vial con más de 50 años de experiencia. Consulta nuestras vacantes disponibles.">
-    <title>SERVYRE - Empleo</title>
+    <meta name="description"
+        content="SERVYRE - Líderes en infraestructura vial en México. Especialistas en señalización, semaforización, mantenimiento vial y sistemas inteligentes de transporte. Más de 50 años de experiencia.">
+    <!-- PRELOAD de fuentes críticas (opcional pero recomendado) -->
+    <link rel="preload" href="assets/fonts/roboto/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- CSS de fuentes PRIMERO -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- CSS principal DESPUÉS -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700;900&display=swap"
-        rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="img/favicon-servyre.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="img/favicon-servyre.png">
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lf_S04sAAAAACkuE8PuokEaac4umzslAxDRtOpp"></script>
+
+    <title>SERVYRE - Infraestructura Vial</title>
+
 </head>
 
 <body>
@@ -42,7 +44,6 @@
     </header>
 
     <main>
-
         <!-- Form Section -->
         <section id="inicio" class="hero-bolsa">
             <div class="container-bolsa container">
@@ -176,8 +177,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/procesar-formulario.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/procesar-formulario.js" defer></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
         content="SERVYRE - Líderes en infraestructura vial en México. Especialistas en señalización, semaforización, mantenimiento vial y sistemas inteligentes de transporte. Más de 50 años de experiencia.">
     <!-- CSS principal DESPUÉS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <!-- Icons -->
     <link rel="icon" href="img/favicon-servyre.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="img/favicon-servyre.png">
@@ -38,20 +39,93 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <picture class="hero-picture">
-            <source media="(max-width: 640px)" srcset="img/hero-bg-mobile.webp">
-            <source media="(max-width: 1024px)" srcset="img/hero-bg-tablet.webp">
-            <img src="img/hero-bg.webp" alt="background-carretera" class="hero-bg-image">
-        </picture>
-        <div class="container hero-content">
-            <h1>Tu Primera Opción en Infraestructura Vial</h1>
-            <p>Líderes en soluciones integrales de señalización, semaforización y mantenimiento vial. Garantizando
-                seguridad y fluidez en las carreteras de México.</p>
-            <a href="#servicios" class="btn">Nuestros Servicios</a>
+
+<!-- Hero Carousel Section -->
+<section id="inicio" class="hero-carousel">
+    <div class="hero-carousel__container">
+        <div class="hero-carousel__track">
+            <!-- Slide 1 -->
+            <div class="hero-carousel__slide">
+                <picture class="hero-carousel__picture">
+                    <source media="(max-width: 640px)" srcset="img/hero-bg-mobile.webp">
+                    <source media="(max-width: 1024px)" srcset="img/hero-bg-tablet.webp">
+                    <img src="img/hero-bg.webp" alt="Infraestructura Vial" class="hero-carousel__image">
+                </picture>
+                <div class="hero-carousel__content">
+                    <p class="hero-carousel__subtitle">Tu solución integral en</p>
+                    <h1 class="hero-carousel__title">Infraestructura y Mantenimiento Vial</h1>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-carousel__slide">
+                <picture class="hero-carousel__picture">
+                    <source media="(max-width: 640px)" srcset="img/carousel-2-mobile.webp">
+                    <source media="(max-width: 1024px)" srcset="img/carousel-2-tablet.webp">
+                    <img src="img/carousel-2-desktop.webp" alt="Señalización Vial" class="hero-carousel__image">
+                </picture>
+                <div class="hero-carousel__content">
+                    <p class="hero-carousel__subtitle">La mejor opción</p>
+                    <h1 class="hero-carousel__title">en Señalización Vial</h1>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-carousel__slide">
+                <picture class="hero-carousel__picture">
+                    <source media="(max-width: 640px)" srcset="img/carousel-3-mobile.webp">
+                    <source media="(max-width: 1024px)" srcset="img/carousel-3-tablet.webp">
+                    <img src="img/carousel-3-desktop.webp" alt="Sistemas Inteligentes" class="hero-carousel__image">
+                </picture>
+                <div class="hero-carousel__content">
+                    <p class="hero-carousel__subtitle">ITS Líderes en Tecnología de</p>
+                    <h1 class="hero-carousel__title">Sistemas Inteligentes de Transporte</h1>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-carousel__slide">
+                <picture class="hero-carousel__picture">
+                    <source media="(max-width: 640px)" srcset="img/carousel-4-mobile.webp">
+                    <source media="(max-width: 1024px)" srcset="img/carousel-4-tablet.webp">
+                    <img src="img/carousel-4-desktop.webp" alt="Sistemas de Contención" class="hero-carousel__image">
+                </picture>
+                <div class="hero-carousel__content">
+                    <p class="hero-carousel__subtitle">Haciendo Caminos Seguros con</p>
+                    <h1 class="hero-carousel__title">Innovadores Sistemas de Contención</h1>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <!-- Controles de navegación -->
+        <button class="hero-carousel__btn hero-carousel__btn--prev" aria-label="Slide anterior">
+            <img src="assets/icons/arrow-left.svg" alt="anterior">
+        </button>
+        <button class="hero-carousel__btn hero-carousel__btn--next" aria-label="Siguiente slide">
+            <img src="assets/icons/arrow-right.svg" alt="siguiente">
+        </button>
+
+        <!-- Indicadores -->
+        <div class="hero-carousel__indicators">
+            <button class="hero-carousel__dot hero-carousel__dot--active" data-slide="0" aria-label="Ir a slide 1"></button>
+            <button class="hero-carousel__dot" data-slide="1" aria-label="Ir a slide 2"></button>
+            <button class="hero-carousel__dot" data-slide="2" aria-label="Ir a slide 3"></button>
+            <button class="hero-carousel__dot" data-slide="3" aria-label="Ir a slide 4"></button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- About Section -->
@@ -331,6 +405,7 @@
 
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js" defer></script>
+    <script src="js/carousel-hero.js" defer></script>
     <script src="js/component-mvv.js" defer></script>
 </body>
 

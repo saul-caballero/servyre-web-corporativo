@@ -405,10 +405,6 @@ nav {
     transition: transform 0.3s ease;
 }
 
-.empresa-image:hover img {
-    transform: scale(1.05);
-}
-
 .empresa-footer {
     line-height: 1.8;
 }

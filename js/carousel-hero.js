@@ -1,4 +1,4 @@
-// Hero Carousel - Versión alternativa sin clones (Sliding Window)
+// Hero Carousel
 (function() {
     const track = document.querySelector('.hero-carousel__track');
     const slides = Array.from(document.querySelectorAll('.hero-carousel__slide'));

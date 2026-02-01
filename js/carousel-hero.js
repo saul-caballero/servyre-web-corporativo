@@ -130,24 +130,52 @@
         });
     }
     
-    // Ir a un slide específico
+    // Ir a un slide específico directamente
     function goToSlide(targetIndex) {
         if (isAnimating || targetIndex === currentIndex) return;
         
-        const diff = (targetIndex - currentIndex + slideCount) % slideCount;
+        isAnimating = true;
         
-        if (diff < slideCount / 2) {
-            // Ir hacia adelante
+        // Ocultar textos actuales
+        hideTexts(slides[currentIndex]);
+        
+        // Calcular la diferencia
+        const diff = targetIndex - currentIndex;
+        
+        // Reorganizar slides sin animación para posicionar el objetivo
+        track.style.transition = 'none';
+        
+        if (diff > 0) {
+            // Mover slides hacia adelante
             for (let i = 0; i < diff; i++) {
-                setTimeout(() => nextSlide(), i * 750);
+                const firstSlide = track.firstElementChild;
+                track.appendChild(firstSlide);
             }
-        } else {
-            // Ir hacia atrás
-            const backDiff = slideCount - diff;
-            for (let i = 0; i < backDiff; i++) {
-                setTimeout(() => prevSlide(), i * 750);
+        } else if (diff < 0) {
+            // Mover slides hacia atrás
+            for (let i = 0; i < Math.abs(diff); i++) {
+                const lastSlide = track.lastElementChild;
+                track.insertBefore(lastSlide, track.firstElementChild);
             }
         }
+        
+        // Actualizar índice
+        currentIndex = targetIndex;
+        
+        // Resetear posición
+        track.style.transform = 'translateX(0%)';
+        
+        // Forzar reflow
+        void track.offsetWidth;
+        
+        // Mostrar textos del nuevo slide
+        showTexts(slides[currentIndex]);
+        updateDots();
+        
+        // Permitir siguiente animación
+        setTimeout(() => {
+            isAnimating = false;
+        }, 50);
     }
     
     // Autoplay

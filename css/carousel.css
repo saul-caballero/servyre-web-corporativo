@@ -1,5 +1,5 @@
 /* ===================================
-   HERO CAROUSEL
+   HERO CAROUSEL - ANIMACIONES DESDE LOS BORDES
    =================================== */
 
 .hero-carousel {
@@ -77,14 +77,18 @@
     padding: 20px;
 }
 
+/* ANIMACIONES EXTREMAS - DESDE LOS BORDES LATERALES */
 .hero-carousel__subtitle {
     font-size: 1.2rem;
     margin-bottom: 15px;
     font-weight: 300;
     letter-spacing: 1px;
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    /* Empieza COMPLETAMENTE fuera de la pantalla a la IZQUIERDA */
+    transform: translateX(-100vw);
+    /* Animación más rápida */
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-carousel__title {
@@ -94,9 +98,12 @@
     margin-bottom: 30px;
     line-height: 1.2;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    /* Empieza COMPLETAMENTE fuera de la pantalla a la DERECHA */
+    transform: translateX(100vw);
+    /* Animación más rápida con delay reducido */
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s,
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
 }
 
 /* Controles de navegación */
@@ -181,10 +188,14 @@
 
     .hero-carousel__title {
         font-size: 2rem;
+        /* Sigue viniendo desde el borde derecho */
+        transform: translateX(100vw);
     }
 
     .hero-carousel__subtitle {
         font-size: 1rem;
+        /* Sigue viniendo desde el borde izquierdo */
+        transform: translateX(-100vw);
     }
 
     .hero-carousel__btn {
@@ -208,10 +219,14 @@
 @media (max-width: 480px) {
     .hero-carousel__title {
         font-size: 1.5rem;
+        /* Sigue viniendo desde el borde derecho */
+        transform: translateX(100vw);
     }
 
     .hero-carousel__subtitle {
         font-size: 0.9rem;
+        /* Sigue viniendo desde el borde izquierdo */
+        transform: translateX(-100vw);
     }
 
     .hero-carousel__btn {

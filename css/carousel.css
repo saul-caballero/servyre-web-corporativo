@@ -1,6 +1,3 @@
-/* ===================================
-   HERO CAROUSEL - ANIMACIONES DESDE LOS BORDES
-   =================================== */
 
 .hero-carousel {
     position: relative;
@@ -64,7 +61,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     text-align: center;
     color: var(--white);
     z-index: 2;
@@ -102,11 +99,11 @@
                 transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
 }
 
-/* Controles de navegación - MÁS GRANDES Y VISIBLES */
+/* Controles de navegación */
 .hero-carousel__btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     background: none;
     border: none;
     width: 70px;

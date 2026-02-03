@@ -10,7 +10,7 @@
     let currentIndex = 0;
     let isAnimating = false;
     let autoplayTimer;
-    const AUTOPLAY_DELAY = 3500; // 3.5 segundos
+    const AUTOPLAY_DELAY = 4000; // 4 segundos
     
     // Posición inicial
     track.style.transform = 'translateX(0%)';

@@ -74,6 +74,7 @@
 .hero-carousel__subtitle {
     font-size: 1.2rem;
     font-family: var(--font-body);
+    font-weight: 600;
     margin-bottom: 15px;
     letter-spacing: 1px;
     opacity: 0;

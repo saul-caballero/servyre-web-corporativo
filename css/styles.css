@@ -1758,10 +1758,6 @@ nav {
     transform: none;
 }
 
-/* =====================================================
-   RESPONSIVE - CONFIGURACIÓN MEJORADA DEL TOGGLE MENU
-   ===================================================== */
-
 /* RESPONSIVE - MOSTRAR TOGGLE MENU (900px y menos) */
 @media (max-width: 900px) {
     .mobile-toggle {

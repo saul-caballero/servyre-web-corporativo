@@ -1761,6 +1761,34 @@ nav {
     transform: none;
 }
 
+
+/* AVISO DE PRIVACIDAD */
+.privacidad-section {
+    padding: var(--section-padding);
+}
+
+.privacidad-section h1 {
+    border-bottom: 2px solid var(--primary-color);
+    padding: 40px 0 20px;
+}
+
+.privacidad-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.privacidad-text h2 {
+    font-size: var(--font-heading);
+    margin-bottom: 10px;
+}
+
+.privacidad-text p {
+    margin: 0 0 30px;
+}
+
+
+
+
 /* RESPONSIVE - MOSTRAR TOGGLE MENU (900px y menos) */
 @media (max-width: 900px) {
     .mobile-toggle {

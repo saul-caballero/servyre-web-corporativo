@@ -247,7 +247,7 @@ p {
 /* HEADER */
 header {
     position: fixed;
-    top: 30px;
+    top: 0;  /* Por defecto en 0 para todas las páginas */
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -257,9 +257,20 @@ header {
     transition: top 0.3s ease;
 }
 
-header.scrolled {
+/* Solo en index.html (con clase .has-top-bar) */
+body.has-top-bar header {
+    top: 30px;
+}
+
+body.has-top-bar header.scrolled {
     top: 0;
 }
+
+/* Ocultar top bar en páginas que no la tienen */
+body:not(.has-top-bar) .top-info-bar {
+    display: none !important;
+}
+
 
 
 nav {
@@ -1924,10 +1935,15 @@ nav {
 
     /* Header */
     header {
+        top: 0;
+    }
+
+    /* Solo en index con top bar */
+    body.has-top-bar header {
         top: 40px;
     }
 
-    header.scrolled {
+    body.has-top-bar header.scrolled {
         top: 0;
     }
 
@@ -2408,8 +2424,8 @@ nav {
         display: none !important;
     }
 
-    /* El header vuelve a su posición original (top: 0) */
-    header {
+     /* Header vuelve a top: 0 */
+    body.has-top-bar header {
         top: 0 !important;
     }
 

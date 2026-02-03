@@ -7,7 +7,7 @@ class Carousel {
         this.nextBtn = document.querySelector('.carousel-btn--next');
         this.currentSlide = 0;
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 5000; // 5 segundos
+        this.autoPlayDelay = 3000; // 3 segundos
 
         this.init();
     }

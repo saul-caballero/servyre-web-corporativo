@@ -1743,9 +1743,24 @@ nav {
     text-align: center;
 }
 
-.footer p {
+.footer p, .footer a {
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.footer a{
+    text-decoration: underline;
+}
+
+.footer a:hover{
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 /* ANIMACIONES */
@@ -2447,6 +2462,15 @@ nav {
     .sk-chase {
         width: 40px;
         height: 40px;
+    }
+
+    .footer-container {
+        gap: 10px;
+    }
+
+    .footer-container p, .footer-container a {
+        padding: 0;
+        margin: 0;
     }
 }
 

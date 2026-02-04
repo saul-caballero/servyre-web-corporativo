@@ -1,0 +1,81 @@
+# Archivos de configuración sensibles (dependerá del repositorio si es público o privado)
+# php/config.php 
+# config.php
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Directorios de dependencias
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.buildpath
+
+# Archivos de log
+*.log
+logs/
+error_log
+
+# Archivos temporales
+tmp/
+temp/
+cache/
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Archivos de compilación
+*.min.js
+*.min.css
+dist/
+build/
+
+# Archivos de prueba
+phpunit.xml
+.phpunit.result.cache
+tests/_output/
+coverage/
+
+# Archivos de bases de datos locales
+*.sql
+*.sqlite
+*.db
+
+# Archivos de subida (si se guardan localmente)
+uploads/
+files/
+curriculum/
+
+# Variables de PHP
+.php_cs
+.php_cs.cache
+
+# Certificados y llaves privadas
+*.pem
+*.key
+*.crt
+*.cert
+
+# Documentos privados
+NOTAS.txt
+TODO.txt
+credentials.txt

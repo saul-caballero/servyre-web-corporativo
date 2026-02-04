@@ -144,7 +144,9 @@ servyre-website/
 │   └── PHPMailer/           # Librería PHPMailer
 │
 ├── assets/
-│   └── icons/               # Iconos SVG
+│   ├── icons/              # Iconos SVG
+│   ├── fonts/              # Fuentes woff y woff2 
+│   └── wave-primary.svg    # Wave visual de contacto 
 │
 ├── img/                     # Imágenes optimizadas (WebP)
 │
@@ -199,7 +201,7 @@ define('MODO_DESARROLLO', false); // Cambiar a false en producción
 echo "php/config.php" >> .gitignore
 ```
 
-**IMPORTANTE**: Nunca subas `config.php` al repositorio público.
+**IMPORTANTE**: Nunca subas `config.php` a un repositorio público.
 
 ---
 

@@ -1382,12 +1382,12 @@ nav {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 2.5rem;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .form__campo {
@@ -1459,17 +1459,33 @@ nav {
 }
 
 .file-name {
-    margin-top: 10px;
     font-size: 0.85rem;
     color: #666;
     font-family: var(--font-body);
 }
 
+.aviso-enviar p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--dark-color);
+}
+
+.aviso-enviar a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.aviso-enviar a:hover {
+    color: var(--primary-color);
+}
+
+
 .form__btns {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 1rem;
 }
 
 .form__btns button {

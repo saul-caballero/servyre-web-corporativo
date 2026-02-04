@@ -27,7 +27,6 @@
 - [Uso](#-uso)
 - [Seguridad](#-seguridad)
 - [Optimización y Rendimiento](#-optimización-y-rendimiento)
-- [Contribuir](#-contribuir)
 - [Licencia](#-licencia)
 - [Contacto](#-contacto)
 
@@ -92,27 +91,34 @@ SERVYRE es una empresa líder en **infraestructura vial**, **señalización** y 
 
 ### Frontend
 
-Tecnología - Versión - Uso 
-HTML5 - / - Estructura semántica
-CSS3 - / - Estilos y animaciones
-JavaScript (ES6+)  - / -  Interactividad y lógica
-Google reCAPTCHA - v3 - Seguridad anti-bot
+| Tecnología | Versión | Uso |
+|-----------|---------|-----|
+| HTML5 | - | Estructura semántica |
+| CSS3 | - | Estilos y animaciones |
+| JavaScript (ES6+) | - | Interactividad y lógica |
+| Google reCAPTCHA | v3 | Seguridad anti-bot |
 
 ### Backend
 
-Tecnología - Versión - Uso
-PHPMailer - 6.x - Envío de correos SMTP
-PHP - 7.4+ - Procesamiento del servidor
+| Tecnología | Versión | Uso |
+|-----------|---------|-----|
+| PHP | 7.4+ | Procesamiento del servidor |
+| PHPMailer | 6.x | Envío de correos SMTP |
 
 ### Librerías y Dependencias
 
+```
 PHPMailer/
 ├── Exception.php
 ├── PHPMailer.php
 └── SMTP.php
+```
 
-##  Estructura del Proyecto
+---
 
+## Estructura del Proyecto
+
+```
 servyre-website/
 │
 ├── index.html                 # Página principal
@@ -143,7 +149,9 @@ servyre-website/
 ├── img/                     # Imágenes optimizadas (WebP)
 │
 └── README.md               # Este archivo
+```
 
+---
 
 ## Instalación
 
@@ -151,7 +159,7 @@ servyre-website/
 
 - Servidor web (Apache/Nginx)
 - PHP 7.4 o superior
-- Servidor SMTP o cuenta Microsfoft 365/Gmail para envío de correos
+- Servidor SMTP o cuenta Microsoft 365/Gmail para envío de correos
 - Certificado SSL (recomendado para producción)
 
 ### Paso 1: Clonar el Repositorio
@@ -193,6 +201,7 @@ echo "php/config.php" >> .gitignore
 
 **IMPORTANTE**: Nunca subas `config.php` al repositorio público.
 
+---
 
 ## Configuración
 
@@ -210,15 +219,6 @@ echo "php/config.php" >> .gitignore
 3. Genera una contraseña de aplicación (16 caracteres)
 4. Usa esta contraseña en `SMTP_PASSWORD`
 
-### Permisos de Archivos (Linux/Unix)
-
-```bash
-chmod 755 php/
-chmod 644 php/*.php
-chmod 600 php/config.php  # Solo lectura para el propietario
-```
-
----
 
 ## Uso
 
@@ -230,6 +230,7 @@ chmod 600 php/config.php  # Solo lectura para el propietario
 4. Cambia `MODO_DESARROLLO` a `false`
 5. Prueba el formulario de contacto
 
+---
 
 ## Seguridad
 
@@ -296,13 +297,7 @@ $mime_real = finfo_file($finfo, $file['tmp_name']);
 | Time to Interactive | < 3.9s |
 | Lighthouse Score | > 90+ |
 
-
-### Guidelines
-
-- Sigue las convenciones de código existentes
-- Documenta funciones complejas
-- Prueba en múltiples navegadores
-- Asegura que el código sea responsivo
+---
 
 ## Licencia
 
@@ -310,14 +305,23 @@ Este proyecto es propiedad de **SERVYRE S.A. de C.V.** Todos los derechos reserv
 
 El código puede ser utilizado como referencia educativa, pero no debe ser redistribuido sin permiso.
 
+---
 
 ## Contacto
 
 **SERVYRE S.A. de C.V.**
 
--  Sitio web: [www.servyre.com](https://www.servyre.com)
--  Email: info@servyre.com
--  Teléfono: 800 822 3484
--  Dirección: P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, CDMX
+- Sitio web: [www.servyre.com](https://www.servyre.com)
+- Email: info@servyre.com
+- Teléfono: 800 822 3484
+- Dirección: P.º de los Tamarindos 100, Piso #2, Bosques de las Lomas, CDMX
 
+---
 
+<div align="center">
+
+Desarrollado por Saúl Caballero Mondragón para SERVYRE
+
+© 2026 SERVYRE S.A. de C.V. - Todos los derechos reservados
+
+</div>

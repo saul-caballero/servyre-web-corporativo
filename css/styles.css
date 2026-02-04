@@ -1227,7 +1227,7 @@ nav {
 /* CONTACT SECTION */
 .contact {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: var(--dark-color);
     padding: var(--section-padding);
     padding-bottom: 120px;
@@ -1250,7 +1250,7 @@ nav {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -1259,8 +1259,7 @@ nav {
     min-width: 250px;
     max-width: 350px;
     text-align: left;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
+    padding: 1.5rem .5rem;
 }
 
 .contact-texts h3 {
@@ -1274,8 +1273,12 @@ nav {
 .contact-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 15px;
+}
+
+.contact-texts--gap .contact-item {
+    gap: 4px;
 }
 
 .icon {
@@ -1300,7 +1303,17 @@ nav {
 
 .contact-texts a:hover {
     color: var(--primary-color);
+    letter-spacing: .5px;
 }
+
+.contact-texts img {
+    border-radius: 50%;
+}
+
+.contact-texts .contact-item--service {
+    text-decoration: none;
+}
+
 
 .wave {
     position: absolute;
@@ -2156,14 +2169,14 @@ nav {
     }
 
     /* Contact */
-    .contact {
+    /* .contact {
         padding: 60px 0 200px;
     }
 
     .contact h2 {
         font-size: 2rem;
         margin-bottom: 30px;
-    }
+    } */
 
     .contact-flex {
         flex-direction: column;

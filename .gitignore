@@ -1,6 +1,6 @@
 # Archivos de configuración sensibles (dependerá del repositorio si es público o privado)
-# php/config.php 
-# config.php
+php/config.php 
+config.php
 
 # Archivos de entorno
 .env

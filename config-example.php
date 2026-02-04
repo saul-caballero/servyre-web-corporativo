@@ -3,7 +3,7 @@
  * ARCHIVO DE CONFIGURACIÓN EJEMPLO
  * 
  * INSTRUCCIONES:
- * 1. Copia este archivo como "config.php" en la misma carpeta
+ * 1. Copia este archivo como "config.php" en la misma carpeta (carpeta php)
  * 2. Completa los valores con tus credenciales reales
  * 3. NO SUBAS config.php a GitHub (está en .gitignore)
  * 

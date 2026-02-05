@@ -1151,7 +1151,7 @@ nav {
 .ubication-contact {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
     flex: 1;
 }
 
@@ -1165,6 +1165,7 @@ nav {
     border: 1px solid #e5e5e5;
     transition: all 0.3s ease;
     cursor: pointer;
+    margin: 0;
 }
 
 .ubication-contact .contact-item:hover {
@@ -1186,7 +1187,7 @@ nav {
     filter: brightness(0) saturate(100%) invert(85%) sepia(47%) saturate(523%) hue-rotate(359deg) brightness(98%) contrast(94%);
 }
 
-.ubication-contact .contact-item a {
+.ubication-contact a {
     color: var(--dark-color);
     text-decoration: none;
     font-size: 0.95rem;

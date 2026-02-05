@@ -238,11 +238,11 @@ p {
 
 .top-info-item a {
     color: var(--dark-color);
-    transition: color 0.3s ease;
 }
 
 .top-info-item a:hover {
-    color: var(--primary-color);
+    color: var(--white);
+    letter-spacing: .2px;
 }
 
 /* HEADER */

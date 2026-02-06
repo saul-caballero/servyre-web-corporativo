@@ -428,15 +428,29 @@ nav {
     padding: 40px 0 60px;
 }
 
+.empresa-header {
+    margin-top: 40px;
+}
+
 .empresa-header h1 {
     font-size: 2.5rem;
     color: var(--dark-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding: var(--section-padding);
-    padding-bottom: 5px;
-    margin-bottom: 50px;
+    padding: 20px 0;
+    margin-bottom: 40px;
     font-family: var(--font-heading);
+    position: relative;
 }
+
+.empresa-header h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: var(--primary-color);
+}
+
 
 .empresa-content {
     display: grid;
@@ -1313,6 +1327,7 @@ nav {
 
 .contact-texts .contact-item--service {
     text-decoration: none;
+    line-height: 1.3;
 }
 
 

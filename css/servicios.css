@@ -1,0 +1,153 @@
+/* HERO SECTION */
+.hero-cards {
+    min-height: 70vh;
+    width: 100%;
+    padding: var(--section-padding);
+    display: flex;
+    align-items: center;
+}
+
+.hero-cards--infra {
+    background: linear-gradient(rgba(0, 0, 0, 0.700), rgb(0, 0, 0, 0.600)), url('../img/hero-infra-mant-vial.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-cards-texts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: var(--white);
+}
+
+.hero-cards h1 {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    margin-bottom: 40px;
+    color: inherit;
+}
+
+.hero-cards h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.hero-cards p {
+    width: 80%;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+
+/* CARDS SECTION*/
+.section-cards{
+    padding: var(--section-padding);
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Tarjeta Base */
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: var(--dark-color);
+    border-radius: 0 15px 15px 15px;
+    box-shadow: var(--shadow); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+.card--white {
+    background-color: var(--white);
+}
+
+/* Imagen con Clip-Path animado */
+.card-content {
+    position: relative;
+    height: 200px;
+    /* Estado inicial inclinado */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Animación del Clip-Path al hacer hover en la card */
+.card:hover .card-content {
+    /* Estado final recto (mismo número de puntos) */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    scale: 1.1;
+}
+
+/* Detalles y Textos */
+.details {
+    padding: 20px 25px 30px;
+}
+
+.details h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--white);
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px 0 15px 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* La Línea animada */
+.details h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    /* Estado inicial: línea corta o invisible */
+    width: 30px; 
+    transition: width 0.4s ease-in-out, background-color 0.4s ease;
+    border-radius: 2px;
+}
+
+/* Animación de la línea al hacer hover en la card */
+.card:hover .details h2::after {
+    width: 80px; /* La línea se expande */
+}
+
+.details p {
+    color: var(--white);
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Variación para card blanca */
+.card--white .details p, 
+.card--white .details h2 {
+    color: #000;
+}

@@ -779,16 +779,21 @@ nav {
 }
 
 .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background: var(--white);
-    padding: 30px;
+    padding: 30px 20px 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
-    text-align: center;
+    border-radius: 0px 12px 12px 12px
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -808,6 +813,25 @@ nav {
 .service-card p {
     line-height: 1.6;
     color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.service-card a {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: .8rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 0 8px 8px 8px;
+}
+
+.service-card a:hover {
+    box-shadow: var(--shadow);
+    color: var(--white);
+    text-shadow: var(--shadow);
 }
 
 /* PRODUCTS SECTION */

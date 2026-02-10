@@ -86,7 +86,8 @@
     height: 200px;
     /* Estado inicial inclinado */
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    transition: all 0.5s ease-in-out;
+    transition: clip-path 0.5s ease-in-out,
+                scale 0.5s ease-in-out;
 }
 
 .card-content img {

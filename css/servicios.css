@@ -23,7 +23,7 @@
     color: var(--white);
 }
 
-.hero-cards h1 {
+.hero-cards-texts h1 {
     width: 100%;
     padding: 20px 0;
     position: relative;
@@ -31,7 +31,7 @@
     color: inherit;
 }
 
-.hero-cards h1::after{
+.hero-cards-texts h1::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -41,7 +41,11 @@
     background: var(--primary-color);
 }
 
-.hero-cards p {
+.hero-cards-texts span {
+    font-size: 1rem;
+}
+
+.hero-cards-texts p {
     width: 80%;
     font-family: var(--font-body);
     font-weight: 600;

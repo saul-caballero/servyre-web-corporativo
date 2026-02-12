@@ -8,18 +8,29 @@
 }
 
 .hero-cards--infra {
-    background: linear-gradient(rgba(0, 0, 0, 0.700), rgb(0, 0, 0, 0.600)), url('../img/hero-infra-mant-vial.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-infra-mant-vial.webp') 
+                center / cover no-repeat fixed;
 }
 
-.hero-cards--supervision-obra {
-    background: linear-gradient(rgba(0, 0, 0, 0.700), rgb(0, 0, 0, 0.700)), url('../img/hero-ingenieria-transito.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.hero-cards--ingenieria-transito {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-ingenieria-transito.webp') 
+                center / cover no-repeat fixed;
 }
+
+.hero-cards--senalamiento-vial {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-senalamiento-vial.webp') 
+                center / cover no-repeat fixed;
+}
+
+.hero-cards--senalamiento-vertical {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-senalamiento-vertical.webp') 
+                center / cover no-repeat fixed;
+}
+
 
 .hero-cards-texts {
     width: 100%;
@@ -59,7 +70,7 @@
 }
 
 
-/* CARDS SECTION*/
+/* SERVICE SECTION*/
 .section-cards{
     padding: var(--section-padding);
 }
@@ -87,9 +98,7 @@
     overflow: hidden;
 }
 
-.card--white {
-    background-color: var(--white);
-}
+
 
 /* Imagen con Clip-Path animado */
 .card-content {
@@ -118,9 +127,12 @@
 /* Detalles y Textos */
 .details {
     padding: 20px 25px 30px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.details h2 {
+.details h2, .details h3 {
     font-family: var(--font-body);
     font-weight: 600;
     color: var(--white);
@@ -156,10 +168,324 @@
     line-height: 1.6;
     font-weight: 400;
     margin: 0;
+    margin-bottom: 20px;
 }
 
-/* Variación para card blanca */
-.card--white .details p, 
-.card--white .details h2 {
-    color: #000;
+.details a {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: .8rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 0 8px 8px 8px;
+}
+
+.details a:hover {
+    box-shadow: var(--shadow);
+    color: var(--white);
+    text-shadow: var(--shadow);
+}
+
+
+/* ══════════════════════════════════════════════════════════════ */
+/*  SECTION LARGE - JERARQUÍA VISUAL MEJORADA                    */
+/*  Estructura de cajas anidadas con colores diferenciados:      */
+/*    NIVEL 1 (ABUELO)  .section-large     → gris claro #f5f5f5  */
+/*    NIVEL 2 (PADRE)   .subsection        → gris oscuro #2a2a2a */
+/*    NIVEL 3 (NIETO)   .card              → negro #1a1a1a       */
+/*                                                                */
+/*  SIN BORDER-RADIUS - Todo pegado y cuadrado                   */
+/* ══════════════════════════════════════════════════════════════ */
+
+
+/* ── NIVEL 1: Mega sección — ABUELO (gris claro) ─────────────── */
+
+.section-large {
+    width: 100%;
+    background-color: #f5f5f5;           /* Gris muy claro para distinguir del blanco */
+    padding: var(--section-padding);
+}
+
+/* Banner full-width en la parte superior de la mega sección */
+.section-large__banner {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
+    margin-bottom: 0;                    /* SIN separación - pegado al contenido */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay específico para mejorar legibilidad del texto */
+.section-large__banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.section-large__banner .container {
+    padding: 30px 0;
+    position: relative;
+    z-index: 2;                          /* Por encima del overlay */
+}
+
+.section-large__banner h2 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);  /* Sombra para mejor legibilidad */
+}
+
+.section-large__banner p {
+    text-align: center;
+    max-width: 850px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Modificadores de imagen — SIN fixed para evitar confusión con el hero */
+.section-large__banner--vertical {
+    background: url('../img/hero-senalamiento-vertical.webp') center / cover no-repeat;
+}
+
+.section-large__banner--horizontal {
+    background: url('../img/hero-senalamiento-horizontal.webp') center / cover no-repeat;
+}
+
+/* Área donde flotan las subsecciones */
+.section-large__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;                              /* SIN gap - subsecciones pegadas */
+    padding: 0;                          /* SIN padding - todo pegado */
+}
+
+/* El .container dentro del body centra el ancho */
+.section-large__body .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;                              /* SIN gap entre subsecciones */
+}
+
+
+/* ── NIVEL 2: Subsección — PADRE (caja gris oscuro) ──────────── */
+            
+.subsection {
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3px;                  /* Separación mínima entre subsecciones */
+}
+
+.subsection:hover {
+    border-color: rgba(255,107,0,0.3);   /* Borde naranja al hover */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+
+/* ── Header de la subsección (parte superior del PADRE) ─────── */
+
+.subsection__header {
+    display: flex;
+    flex-direction: row;
+    min-height: 240px;
+    cursor: default;
+    background-color: #333333;           /* Ligeramente más claro que el fondo */
+    transition: background-color 0.3s ease;
+}
+
+.subsection__header:hover {
+    background-color: #3a3a3a;
+}
+
+.subsection__header-img {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+}
+
+.subsection__header-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: scale 0.5s ease;
+}
+
+.subsection__header:hover .subsection__header-img img {
+    scale: 1.2;
+}
+
+/* Textos del header */
+.subsection__header-texts {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 50px;
+    background-color: var(--white);
+}
+
+.subsection__header-texts h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.subsection__header-texts p {
+    color: var(--dark-color);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* ── NIVEL 3: Área de cards NIETAS (negro profundo) ──────────── */
+
+.subsection__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;                           /* Gap reducido entre cards */
+    padding: 35px 25px 40px;             /* Padding más compacto */
+    background-color: #2a2a2a;           /* Mismo color que subsection para continuidad */
+}
+
+/* Las cards hijas son NEGRAS para destacar como nivel más profundo */
+.subsection__cards .card {
+    background-color: #1a1a1a;           /* NEGRO profundo - máximo contraste */
+    min-width: 280px;                    /* Min-width ajustado para mejor layout */
+    max-width: 380px;                    /* Max-width ajustado */
+    flex: 1 1 calc(33.333% - 20px);      /* 3 columnas con gap */
+    min-height: 160px;                   /* Altura mínima reducida */
+    transition: all 0.3s ease;
+}
+
+.subsection__cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px var(--primary-color);
+}
+
+/* Las cards dentro de la caja no tienen imagen, solo .details */
+.subsection__cards .details {
+    padding: 22px 26px 26px;             /* Padding ajustado */
+}
+
+.subsection__cards .details h2 {
+    font-size: 1rem;
+    color: var(--white);
+    margin: 0 0 12px 0;
+}
+
+.subsection__cards .details p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    /* En tablets: 2 columnas */
+    .subsection__cards .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-large__banner--vertical,
+    .section-large__banner--horizontal {
+        background-attachment: scroll;
+    }
+
+    /* Banner más compacto en móvil */
+    .section-large__banner {
+        min-height: 30vh;
+    }
+
+    .section-large__banner .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .section-large__banner h2 {
+        font-size: 2rem;
+    }
+
+    /* Cabecera pasa a columna: imagen arriba, texto abajo */
+    .subsection__header {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .subsection__header-img {
+        flex: unset;
+        height: 200px;
+    }
+
+    .subsection__header-texts {
+        flex: unset;
+        padding: 25px 20px 30px;
+    }
+
+    .subsection__header-texts h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Cards hijas: ancho completo en móvil */
+    .subsection__cards .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .subsection__cards {
+        padding: 25px 15px 30px;
+        gap: 15px;
+    }
+
+    /* Reducir gaps en móvil */
+    .section-large {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-large__banner h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-large__banner p {
+        font-size: 0.95rem;
+    }
+
+    .subsection__header-texts {
+        padding: 20px 15px 25px;
+    }
 }

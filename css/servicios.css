@@ -98,9 +98,7 @@
     overflow: hidden;
 }
 
-.card--white {
-    background-color: var(--white);
-}
+
 
 /* Imagen con Clip-Path animado */
 .card-content {
@@ -129,6 +127,9 @@
 /* Detalles y Textos */
 .details {
     padding: 20px 25px 30px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .details h2, .details h3 {
@@ -167,6 +168,25 @@
     line-height: 1.6;
     font-weight: 400;
     margin: 0;
+    margin-bottom: 20px;
+}
+
+.details a {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: .8rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 0 8px 8px 8px;
+}
+
+.details a:hover {
+    box-shadow: var(--shadow);
+    color: var(--white);
+    text-shadow: var(--shadow);
 }
 
 

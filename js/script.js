@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('active');
         const icon = mobileToggle.querySelector('img');
         if (navLinks.classList.contains('active')) {
-            icon.src = 'assets/icons/close.svg';
+            icon.src = '../../assets/icons/close.svg' || '../assets/icons/close.svg';
             icon.alt = 'cerrar menu';
         } else {
-            icon.src = 'assets/icons/toggle.svg';
+            icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
             icon.alt = 'menu';
         }
     });
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             const icon = mobileToggle.querySelector('img');
-            icon.src = 'assets/icons/toggle.svg';
+            icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
             icon.alt = 'menu';
         });
     });

@@ -189,23 +189,11 @@
     text-shadow: var(--shadow);
 }
 
-
-/* ══════════════════════════════════════════════════════════════ */
-/*  SECTION LARGE - JERARQUÍA VISUAL MEJORADA                    */
-/*  Estructura de cajas anidadas con colores diferenciados:      */
-/*    NIVEL 1 (ABUELO)  .section-large     → gris claro #f5f5f5  */
-/*    NIVEL 2 (PADRE)   .subsection        → gris oscuro #2a2a2a */
-/*    NIVEL 3 (NIETO)   .card              → negro #1a1a1a       */
-/*                                                                */
-/*  SIN BORDER-RADIUS - Todo pegado y cuadrado                   */
-/* ══════════════════════════════════════════════════════════════ */
-
-
-/* ── NIVEL 1: Mega sección — ABUELO (gris claro) ─────────────── */
+/* NIVEL 1: Mega sección */
 
 .section-large {
     width: 100%;
-    background-color: #f5f5f5;           /* Gris muy claro para distinguir del blanco */
+    background-color: #f5f5f5;
     padding: var(--section-padding);
 }
 
@@ -333,7 +321,7 @@
 }
 
 .subsection__header:hover .subsection__header-img img {
-    scale: 1.2;
+    scale: 1.1;
 }
 
 /* Textos del header */

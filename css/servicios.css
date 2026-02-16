@@ -31,6 +31,11 @@
                 center / cover no-repeat fixed;
 }
 
+.hero-cards--senalamiento-horizontal {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-senalamiento-horizontal.webp') 
+                center / cover no-repeat fixed;
+}
 
 .hero-cards-texts {
     width: 100%;
@@ -69,7 +74,6 @@
     font-weight: 600;
 }
 
-
 /* SERVICE SECTION*/
 .section-cards{
     padding: var(--section-padding);
@@ -97,8 +101,6 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
 }
-
-
 
 /* Imagen con Clip-Path animado */
 .card-content {
@@ -151,7 +153,6 @@
     left: 0;
     height: 3px;
     background-color: var(--primary-color);
-    /* Estado inicial: línea corta o invisible */
     width: 30px; 
     transition: width 0.4s ease-in-out, background-color 0.4s ease;
     border-radius: 2px;
@@ -171,9 +172,13 @@
     margin-bottom: 20px;
 }
 
+.details p span {
+    font-weight: bold;
+}
+
 .details a {
     align-self: flex-end;
-    margin-top: auto;
+    margin-top: 0;
     font-size: .8rem;
     font-weight: 600;
     display: inline-block;
@@ -190,7 +195,6 @@
 }
 
 /* NIVEL 1: Mega sección */
-
 .section-large {
     width: 100%;
     background-color: #f5f5f5;
@@ -204,7 +208,7 @@
     display: flex;
     align-items: center;
     background-color: var(--dark-color);
-    margin-bottom: 0;                    /* SIN separación - pegado al contenido */
+    margin-bottom: 0;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     position: relative;
     overflow: hidden;
@@ -230,14 +234,14 @@
 .section-large__banner .container {
     padding: 30px 0;
     position: relative;
-    z-index: 2;                          /* Por encima del overlay */
+    z-index: 2;                         
 }
 
 .section-large__banner h2 {
     color: var(--white);
     margin-bottom: 20px;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);  /* Sombra para mejor legibilidad */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3); 
 }
 
 .section-large__banner p {
@@ -251,54 +255,42 @@
     text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-/* Modificadores de imagen — SIN fixed para evitar confusión con el hero */
-.section-large__banner--vertical {
-    background: url('../img/hero-senalamiento-vertical.webp') center / cover no-repeat;
-}
-
-.section-large__banner--horizontal {
-    background: url('../img/hero-senalamiento-horizontal.webp') center / cover no-repeat;
-}
-
 /* Área donde flotan las subsecciones */
 .section-large__body {
     display: flex;
     flex-direction: column;
-    gap: 0;                              /* SIN gap - subsecciones pegadas */
-    padding: 0;                          /* SIN padding - todo pegado */
+    gap: 0;                              
+    padding: 0;                       
 }
 
 /* El .container dentro del body centra el ancho */
 .section-large__body .container {
     display: flex;
     flex-direction: column;
-    gap: 0;                              /* SIN gap entre subsecciones */
+    gap: 0;                         
 }
 
-
-/* ── NIVEL 2: Subsección — PADRE (caja gris oscuro) ──────────── */
-            
+/* NIVEL 2: Subsección — PADRE */         
 .subsection {
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 3px;                  /* Separación mínima entre subsecciones */
+    margin-bottom: 3px;      
 }
 
 .subsection:hover {
-    border-color: rgba(255,107,0,0.3);   /* Borde naranja al hover */
+    border-color: rgba(255,107,0,0.3);  
     box-shadow: 0 12px 35px rgba(0,0,0,0.25);
 }
 
 
-/* ── Header de la subsección (parte superior del PADRE) ─────── */
-
+/* Header de la subsección */
 .subsection__header {
     display: flex;
     flex-direction: row;
     min-height: 240px;
     cursor: default;
-    background-color: #333333;           /* Ligeramente más claro que el fondo */
+    background-color: #333333;        
     transition: background-color 0.3s ease;
 }
 
@@ -354,25 +346,29 @@
 }
 
 
-/* ── NIVEL 3: Área de cards NIETAS (negro profundo) ──────────── */
-
+/* NIVEL 3: Área de cards NIETAS */
 .subsection__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;                           /* Gap reducido entre cards */
-    padding: 35px 25px 40px;             /* Padding más compacto */
-    background-color: #2a2a2a;           /* Mismo color que subsection para continuidad */
+    gap: 20px;                           
+    padding: 35px 25px 40px;           
+    background-color: #2a2a2a;           
 }
 
 /* Las cards hijas son NEGRAS para destacar como nivel más profundo */
 .subsection__cards .card {
-    background-color: #1a1a1a;           /* NEGRO profundo - máximo contraste */
-    min-width: 280px;                    /* Min-width ajustado para mejor layout */
-    max-width: 380px;                    /* Max-width ajustado */
-    flex: 1 1 calc(33.333% - 20px);      /* 3 columnas con gap */
-    min-height: 160px;                   /* Altura mínima reducida */
+    background-color: #1a1a1a;          
+    min-width: 280px;                   
+    max-width: 380px;                  
+    flex: 1 1 calc(33.333% - 20px);      
+    min-height: 160px;                  
     transition: all 0.3s ease;
+}
+
+.subsection__cards .card--large {
+    flex: content;
+    max-width: 100%;
 }
 
 .subsection__cards .card:hover {
@@ -382,7 +378,7 @@
 
 /* Las cards dentro de la caja no tienen imagen, solo .details */
 .subsection__cards .details {
-    padding: 22px 26px 26px;             /* Padding ajustado */
+    padding: 15px 20px;             
 }
 
 .subsection__cards .details h2 {
@@ -393,12 +389,13 @@
 
 .subsection__cards .details p {
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
+    line-height: 1.4;
+    margin: 0 0 10px;
     font-size: 0.9rem;
 }
 
 
-/* ── RESPONSIVE ─────────────────────────────────────────────── */
+/* RESPONSIVE  */
 @media (max-width: 1024px) {
     /* En tablets: 2 columnas */
     .subsection__cards .card {

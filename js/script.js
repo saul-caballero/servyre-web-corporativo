@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
-    const links = document.querySelectorAll('.nav-links a');
+    const serviciosToggle = document.querySelector('.nav-servicios__toggle');
+    const serviciosDiv = document.querySelector('.nav-servicios');
 
-    // Toggle menu
+    // Toggle menú hamburguesa 
     mobileToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         const icon = mobileToggle.querySelector('img');
@@ -13,42 +14,50 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
             icon.alt = 'menu';
+            // Cerrar submenú al cerrar el panel
+            if (serviciosDiv) serviciosDiv.classList.remove('abierto');
         }
     });
 
-    // Cerrar cuando dan click en el menu
-    links.forEach(link => {
+    // ── Toggle submenú Servicios (solo móvil) ────────
+    if (serviciosToggle) {
+        serviciosToggle.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                serviciosDiv.classList.toggle('abierto');
+                const expandido = serviciosDiv.classList.contains('abierto');
+                serviciosToggle.setAttribute('aria-expanded', expandido);
+            }
+        });
+    }
+
+    // Cerrar panel al hacer click en links normales
+    document.querySelectorAll('.nav-links a, .nav-servicios__submenu a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
+            if (serviciosDiv) serviciosDiv.classList.remove('abierto');
             const icon = mobileToggle.querySelector('img');
             icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
             icon.alt = 'menu';
         });
     });
 
-    // Scroll lento al seleccionar (efecto)
+    // ── Scroll suave ─────────────────────────────────
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
-    // Scroll simple (efecto)
+    // Fade-in sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, {
-        threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
         section.classList.add('fade-in-section');

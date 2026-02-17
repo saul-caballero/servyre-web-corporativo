@@ -1871,6 +1871,201 @@ nav {
 }
 
 
+/* MENÚ DESPLEGABLE SERVICIOS */
+
+/* DESKTOP: hover flotante */
+.nav-servicios {
+    position: relative;
+}
+
+.nav-servicios__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.nav-servicios__toggle:hover {
+    color: var(--primary-color);
+}
+
+.nav-servicios__toggle:hover .nav-servicios__icono {
+    filter: brightness(0) invert(1);
+}
+
+.nav-servicios__icono {
+    width: 12px;
+    height: 12px;
+    filter: brightness(0);
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-servicios:hover .nav-servicios__icono,
+.nav-servicios.abierto .nav-servicios__icono {
+    transform: rotate(90deg);
+}
+
+.nav-servicios__submenu {
+    /* Oculto por defecto */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-color);
+    min-width: 260px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 0 0 8px 8px;
+    z-index: 2000;
+    padding: 6px 0;
+}
+
+/* Mostrar en hover (desktop) */
+.nav-servicios:hover .nav-servicios__submenu {
+    display: block;
+}
+
+.nav-servicios__submenu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--white);
+    text-transform: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s, padding-left 0.2s;
+}
+
+.nav-servicios__submenu a:last-child {
+    border-bottom: none;
+}
+
+.nav-servicios__submenu a:hover {
+    background: var(--white);
+    color: var(--dark-color);
+    padding-left: 28px;
+    box-shadow: -3px 0 0 0 var(--primary-color);
+}
+
+
+/* MÓVIL: se expande hacia abajo dentro del panel */
+@media (max-width: 900px) {
+    .nav-servicios {
+        width: 100%;
+        position: static;
+    }
+
+    .nav-servicios__toggle {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1rem;
+    }
+
+    .nav-servicios__submenu {
+        /* Reset estilos desktop */
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border-top: none;
+        border-radius: 0;
+        left: auto;
+        /* Animación max-height */
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        border-left: 3px solid var(--primary-color);
+        padding: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .nav-servicios.abierto .nav-servicios__submenu {
+        max-height: 800px;
+        min-height: 400px;
+    }
+
+    .nav-servicios__submenu a {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        width: 100%;
+    }
+
+    .nav-servicios__submenu a:hover {
+        padding-left: 32px;
+        border-left: 5px solid var(--primary-color);
+    }
+}
+
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    .carousel-slide,
+    .timeline-item,
+    .timeline-content,
+    .timeline-image,
+    .timeline-dot,
+    .empresa-image img,
+    .experience-title,
+    .experience-subtitle,
+    .ubication-map,
+    .ubication-info,
+    .ubication-image,
+    .ubication-contact .contact-item,
+    .ubication-image img,
+    .notificacion,
+    .form__btns button,
+    .btn-secundario,
+    .sk-chase,
+    .sk-chase-dot,
+    .sk-chase-dot:before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .hero {
+        background-attachment: scroll !important;
+    }
+
+    .ubication-contact .contact-item:hover,
+    .ubication-image:hover img {
+        transform: none !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .btn,
+    .form__input,
+    .file-label {
+        border-width: 3px;
+    }
+
+    .service-card,
+    .product-card,
+    .contact-texts {
+        border: 2px solid var(--dark-color);
+    }
+}
 
 
 /* RESPONSIVE - MOSTRAR TOGGLE MENU (900px y menos) */
@@ -1886,6 +2081,7 @@ nav {
         right: -100%;
         top: 70px;
         height: calc(100vh - 70px);
+        overflow-y: auto;
         background-color: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -1922,6 +2118,10 @@ nav {
 
     .nav-links.active {
         right: 0;
+    }
+
+    .nav-servicios__toggle:hover .nav-servicios__icono {
+        filter: brightness(0);
     }
 }
 
@@ -3118,59 +3318,5 @@ nav {
 
     .form {
         padding: 1.5rem;
-    }
-}
-
-/* ACCESIBILIDAD */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    .carousel-slide,
-    .timeline-item,
-    .timeline-content,
-    .timeline-image,
-    .timeline-dot,
-    .empresa-image img,
-    .experience-title,
-    .experience-subtitle,
-    .ubication-map,
-    .ubication-info,
-    .ubication-image,
-    .ubication-contact .contact-item,
-    .ubication-image img,
-    .notificacion,
-    .form__btns button,
-    .btn-secundario,
-    .sk-chase,
-    .sk-chase-dot,
-    .sk-chase-dot:before {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        animation: none !important;
-        transition: none !important;
-        transform: none !important;
-    }
-
-    .hero {
-        background-attachment: scroll !important;
-    }
-
-    .ubication-contact .contact-item:hover,
-    .ubication-image:hover img {
-        transform: none !important;
-    }
-}
-
-@media (prefers-contrast: high) {
-    .btn,
-    .form__input,
-    .file-label {
-        border-width: 3px;
-    }
-
-    .service-card,
-    .product-card,
-    .contact-texts {
-        border: 2px solid var(--dark-color);
     }
 }

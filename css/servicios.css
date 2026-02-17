@@ -362,7 +362,7 @@
     min-width: 280px;                   
     max-width: 380px;                  
     flex: 1 1 calc(33.333% - 20px);      
-    min-height: 160px;                  
+    min-height: 60px;                  
     transition: all 0.3s ease;
 }
 

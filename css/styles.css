@@ -2011,6 +2011,10 @@ nav {
         padding-left: 32px;
         border-left: 5px solid var(--primary-color);
     }
+
+    .nav-links--active {
+        border: none;
+    }
 }
 
 /* ACCESIBILIDAD */

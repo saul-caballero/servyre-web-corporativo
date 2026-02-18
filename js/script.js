@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ── Toggle submenú Servicios (solo móvil) ────────
+
+    // Toggle submenú Servicios (solo móvil)
+    // En desktop el dropdown se maneja solo con CSS hover, por lo que este listener no hace nada en esos tamaños. Actualiza aria-expanded para accesibilidad.
     if (serviciosToggle) {
         serviciosToggle.addEventListener('click', () => {
             if (window.innerWidth <= 900) {
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── Scroll suave ─────────────────────────────────
+    // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');

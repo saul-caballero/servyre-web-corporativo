@@ -37,6 +37,13 @@
                 center / cover no-repeat fixed;
 }
 
+.hero-cards--dispositivos-obra {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), 
+                url('../img/hero-dispositivos-obra.webp') 
+                center / cover no-repeat fixed;
+}
+
+
 .hero-cards-texts {
     width: 100%;
     display: flex;
@@ -305,14 +312,23 @@
     flex: 2;
     overflow: hidden;
     position: relative;
+    max-height: 240px;
+    display: flex;
+    justify-content: end;
 }
 
 .subsection__header-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left;
     display: block;
     transition: scale 0.5s ease;
+}
+
+.subsection__header-img--contain img {
+    object-fit: contain;
+    object-position: center;
 }
 
 .subsection__header:hover .subsection__header-img img {

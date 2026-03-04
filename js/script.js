@@ -3,16 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
     const serviciosToggle = document.querySelector('.nav-servicios__toggle');
     const serviciosDiv = document.querySelector('.nav-servicios');
+    const depth = (window.location.pathname.match(/\//g) || []).length - 1;
+    const base = '../'.repeat(depth);
 
     // Toggle menú hamburguesa 
     mobileToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         const icon = mobileToggle.querySelector('img');
         if (navLinks.classList.contains('active')) {
-            icon.src = '../../assets/icons/close.svg' || '../assets/icons/close.svg';
+            icon.src = base + 'assets/icons/close.svg';
             icon.alt = 'cerrar menu';
         } else {
-            icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
+            icon.src = base + 'assets/icons/toggle.svg';
             icon.alt = 'menu';
             // Cerrar submenú al cerrar el panel
             if (serviciosDiv) serviciosDiv.classList.remove('abierto');
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.remove('active');
             if (serviciosDiv) serviciosDiv.classList.remove('abierto');
             const icon = mobileToggle.querySelector('img');
-            icon.src = '../../assets/icons/toggle.svg' || '../assets/icons/toggle.svg';
+            icon.src = base + 'assets/icons/toggle.svg';
             icon.alt = 'menu';
         });
     });

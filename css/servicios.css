@@ -497,3 +497,53 @@
         padding: 20px 15px 25px;
     }
 }
+
+
+/* Responsive - Monitores de escritorio: 1440px, 1920px */
+@media (min-width: 1400px) {
+
+    .section-large__banner h2 {
+        font-size: 2rem;
+    }
+
+    .section-large__banner p {
+        font-size: 1.05rem;
+        max-width: 1000px;
+    }
+
+    /* Header */
+    .subsection__header {
+        min-height: 320px;
+    }
+
+    .subsection__header-texts h3 {
+        font-size: 1.6rem;
+    }
+
+    .subsection__header-texts p {
+        font-size: 1rem;
+    }
+
+    /* Cards */
+    .subsection__cards .card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .subsection__cards .details h2 {
+        font-size: 1.1rem;
+    }
+
+    .subsection__cards .details p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .section-large__banner p {
+        max-width: 1200px;
+    }
+
+    .subsection__header {
+        min-height: 360px;
+    }
+}

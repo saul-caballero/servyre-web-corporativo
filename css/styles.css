@@ -3324,3 +3324,91 @@ nav {
         padding: 1.5rem;
     }
 }
+
+
+/* Responsive - Monitores de escritorio: 1440px, 1920px */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    h2 { 
+        font-size: 2.8rem; 
+    }
+
+    .logo {
+        width: 200px;
+        height: 68px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 5px 16px;
+    }
+
+    .hero-content h1 { 
+        font-size: 
+        4.5rem; 
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        max-width: 900px;
+    }
+
+    .about-grid { 
+        gap: 70px; 
+    }
+
+    .about-text p { 
+        font-size: 1.05rem; 
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .mvv__buttons { 
+        max-width: 900px; 
+    }
+
+    .mvv__text p { 
+        font-size: 1.1rem; 
+    }
+}
+
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 60px;
+    }
+
+    h2 { font-size: 3rem; }
+
+    .hero-content h1 { 
+        font-size: 5rem; 
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        max-width: 1000px;
+    }
+
+    .services-grid { 
+        gap: 40px; 
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
